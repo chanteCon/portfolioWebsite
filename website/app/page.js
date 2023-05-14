@@ -10,7 +10,7 @@ export default function Home() {
           <h1 className= "text-slate-200 text-2xl">I'm a</h1>
           <h1 className = "text-orange-700 text-3xl">programmer</h1>
         </div>
-        <p className = "text-slate-200 text-xs pt-8">
+        <p className = "text-slate-200 text-sm pt-8">
            I’m a programmer with a wide skill set. I have experience with frontend and backend web projects, games, SaaS projects and more. I graduated from the University of New South Wales with a bachelor of Computer Science in 2023.
         </p>
       </section>

@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,12 +11,19 @@ export const Nav = () => {
     return 'text-slate-200' 
   }
   return (
-    <div className= "w-full text-slate-200 text-xs pt-5 fixed flex justify-between px-10"> 
-      <section>
-        Chantelle Conlon Scoullar
+    <div className= "w-full text-slate-200 text-xs pt-3 fixed flex justify-between px-10"> 
+      <section className = "flex space-x-3 items-center">
+        <Image
+          src ={"/images/me.jpeg"}
+          alt="Picture of laptop" 
+          className = "rounded-full"
+          width = {45}
+          height = {45} >
+        </Image>
+        <p>Chantelle Conlon Scoullar</p>
       </section>
       <section
-        className= "flex justify-end space-x-5"
+        className= "flex justify-end space-x-5 pt-2"
         style = {{backgroundColor: '#1A1A1A'}}>
           <Link 
             href = '/' 
