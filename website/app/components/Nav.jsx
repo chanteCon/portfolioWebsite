@@ -7,13 +7,12 @@ import { useState, useEffect } from "react";
 export const Nav = () => {
   const pathname = usePathname()
   const [smallScreen, setSmallScreen] = useState(false)
+  const [showNavItems, setShowNavItems] = useState(false)
 
   const checkScreenSize = () => {
-    {console.log('resizing window')}
     window.innerWidth <= 700 
       ? setSmallScreen(true)
       : setSmallScreen(false)
-      console.log(smallScreen)
   }
 
   useEffect(() => {
@@ -30,14 +29,49 @@ export const Nav = () => {
   }
   // if screen size small then collapse navbar
   return (
-    <div >
+    <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10"> 
       { smallScreen
           ? (
-            <div> small screen </div>
+            <div className = "w-full flex justify-end">
+              <div
+                className = {showNavItems && `text-right`}
+              >
+              <button
+                className="hover:text-amber-600"
+                onClick = {() => setShowNavItems(!showNavItems)}> {
+                showNavItems ? 'x' : 
+                  <Image 
+                    src = {"/images/hamburgerIcon.png"}
+                    width = {17}
+                    height = {17}
+                  >
+                  </Image>
+              }
+              </button>
+              {
+                showNavItems &&
+                <div className = "flex flex-col space-y-1">
+                <a
+                  className="hover:text-amber-600"
+                  href="/">Home</a>
+                <a
+                  className="hover:text-amber-600"
+                  href="/projects">Projects</a>
+                <a
+                  className="hover:text-amber-600"
+                  href="/about">About Me</a>
+                <a
+                  className="hover:text-amber-600"
+                  href="#">Contact</a>
+              </div>
+              }
+                        </div>
+            </div>
           )
-          : (
-            <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10"> 
-              <section className = "flex space-x-3 items-center">
+          : ( <>
+              <section 
+                className = "flex space-x-3 items-center"
+                >
                 <Image
                   src ={"/images/me.jpeg"}
                   alt="Picture of laptop" 
@@ -67,8 +101,7 @@ export const Nav = () => {
                     About Me</Link>
                   <div>Contact</div>
                 </section>
-            </div>
-        )
+              </> )
       }
     </div>
   )
