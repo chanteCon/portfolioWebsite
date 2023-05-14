@@ -1,13 +1,11 @@
-import { Nav } from "./Nav"
 import { HomeImage } from "./components/HomeImage"
 
 export default function Home() {
   return (
     <>
-    <Nav></Nav>
-    <main className="flex min-h-screen flex-col items-center justify-between" style = {{ backgroundColor: '#191919' }}>
+    <main className="flex min-h-screen flex-col items-center justify-between" style = {{ backgroundColor: '#1A1A1A' }}>
       <section className = "flex flex-col flex-1 items-center justify-center  h-100 w-1/2 text-center pt-40"
-      style = {{ backgroundColor: '#191919' }} >
+      style = {{ backgroundColor: '#1A1A1A' }} >
         <div className = "font-light">
           <h1 className= "text-slate-200 text-2xl">I'm a</h1>
           <h1 className = "text-orange-700 text-3xl">programmer</h1>
