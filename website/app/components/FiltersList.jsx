@@ -1,4 +1,10 @@
-export const FiltersList = ({ filters, selectFilter, onClose }) => {
+export const FiltersList = ({ filters, onClose }) => {
+
+  const filterClicked = (filter) => {
+    localStorage.setItem('projects filter', filter)
+    onClose()
+  }
+
   return (
     <div 
       className = "text-xs rounded-xl p-2"
@@ -13,7 +19,12 @@ export const FiltersList = ({ filters, selectFilter, onClose }) => {
        </div>
        {
         filters.map(filter => 
-          <div>{filter}</div>
+          <div 
+            className = "hover:underline hover:cursor-pointer"
+            onClick = { () => filterClicked(filter) }
+          >
+            {filter}
+          </div>
         )
        }
     </div>
