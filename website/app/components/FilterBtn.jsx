@@ -3,7 +3,7 @@ import Image from "next/image"
 export const FilterBtn = ({ setFilterOn }) => {
   return (
     <button 
-      className = " px-4 text-neutral-100 rounded-2xl w-20" 
+      className = " px-4 text-neutral-100 rounded-2xl w-20 h-7" 
       style = {{ backgroundColor: '#F6A693' }}
       onClick = {setFilterOn}
       >
