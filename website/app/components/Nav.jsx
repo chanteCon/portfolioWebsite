@@ -24,12 +24,12 @@ export const Nav = () => {
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-amber-600 font-bold'
+    if (link === pathname) return 'text-amber-600 font-normal'
     return 'text-neutral-400' 
   }
   // if screen size small then collapse navbar
   return (
-    <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10"> 
+    <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light"> 
       { smallScreen
           ? (
             <div className = "w-full flex justify-end">
@@ -41,7 +41,7 @@ export const Nav = () => {
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? 'x' : 
                   <Image 
-                    src = {"/images/hamburgerIcon.png"}
+                    src = {"/images/icons/hamburgerIcon.png"}
                     width = {17}
                     height = {17}
                   >
