@@ -18,8 +18,8 @@ export default function Projects() {
   }, []);
 
   return (
-      <div className = 'pt-40 w-2/5 flex flex-row flex-wrap md:justify-between justify-center space-x-5 md:space-x-0'>
-        <h1 className= "text-neutral-400 text-2xl"> Recent Projects</h1>
+      <div className = 'pt-20 w-2/5 flex flex-col items-center space-y-2'>
+        <h1 className= "text-neutral-300 text-3xl"> Recent Projects</h1>
         {
           showFilters
             ? <>
