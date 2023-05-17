@@ -24,7 +24,7 @@ export const Nav = () => {
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-amber-600 font-normal'
+    if (link === pathname) return 'text-red-300 font-normal'
     return 'text-neutral-400' 
   }
   // if screen size small then collapse navbar
@@ -37,7 +37,7 @@ export const Nav = () => {
                 className = {showNavItems && `text-right`}
               >
               <button
-                className="hover:text-amber-600"
+                className="hover:text-red-300"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? 'x' : 
                   <Image 
@@ -52,16 +52,16 @@ export const Nav = () => {
                 showNavItems &&
                 <div className = "flex flex-col space-y-1">
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/">Home</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/projects">Projects</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/about">About Me</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="#">Contact</a>
               </div>
               }
