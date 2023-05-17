@@ -6,7 +6,7 @@
 import styled from "@emotion/styled"
 
 export const BackgroundImage = styled('div')({
-  position: 'fixed',
+  position: 'absolute',
   zIndex: '-1',
   backgroundImage: 'url(/images/background.jpg)',
   backgroundSize: 'cover',

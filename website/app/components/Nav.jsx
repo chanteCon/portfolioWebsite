@@ -10,7 +10,7 @@ export const Nav = () => {
   const [showNavItems, setShowNavItems] = useState(false)
 
   const checkScreenSize = () => {
-    window.innerWidth <= 700 
+    window.innerWidth <= 640 
       ? setSmallScreen(true)
       : setSmallScreen(false)
   }
@@ -30,7 +30,7 @@ export const Nav = () => {
   // if screen size small then collapse navbar
   return (
     <div 
-      className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light fixed z-1000"
+      className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light relative z-4000"
       style = {{ backgroundColor: '#191919' }}
       > 
       { smallScreen

@@ -14,12 +14,12 @@ export default function Projects() {
   }
 
   React.useEffect(() => {
-    localStorage.getItem !== null && setActiveFilter(window.localStorage.getItem('projects filter'))
+    localStorage.getItem !== null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
   }, []);
 
   return (
       <div className = 'pt-20 align-center'>
-        <h1 className= "text-neutral-300 text-3xl"> Recent Projects</h1>
+        <h1 className= "text-neutral-300 text-3xl mb-2"> Recent Projects</h1>
         <div className = "absolute sm:top-20 sm:right-20">
           {
             showFilters
