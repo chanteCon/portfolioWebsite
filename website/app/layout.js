@@ -1,6 +1,7 @@
 import './globals.css'
 import { Roboto } from 'next/font/google';
 import { Nav } from './components/Nav';
+import { BackgroundImage } from './components/BackgroundImage';
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -18,7 +19,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <Nav />
-        {children}
+        <main
+        className="flex min-h-screen flex-col items-center justify-between font-light" 
+         >
+         <BackgroundImage 
+          className = "w-full h-full"
+         />
+          {children}
+        </main>
       </body>
     </html>
   )

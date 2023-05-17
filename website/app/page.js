@@ -3,7 +3,6 @@ import { HomeImage } from "./components/HomeImage"
 export default function Home() {
   return (
     <>
-    <main className="flex min-h-screen flex-col items-center justify-between" style = {{ backgroundColor: '#1A1A1A' }}>
       <section className = "flex flex-col flex-1 items-center justify-center  h-100 w-1/2 text-center pt-40"
       style = {{ backgroundColor: '#1A1A1A' }} >
         <div className = "font-light">
@@ -18,7 +17,6 @@ export default function Home() {
         src ={"/images/homePageImage.png"}
         alt="Picture of laptop"
       />
-    </main>
     </>
   )
 }

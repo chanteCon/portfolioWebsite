@@ -24,12 +24,15 @@ export const Nav = () => {
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-red-300 font-normal'
+    if (link === pathname) return 'text-red-300 font-light'
     return 'text-neutral-400' 
   }
   // if screen size small then collapse navbar
   return (
-    <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light"> 
+    <div 
+      className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light fixed z-1000"
+      style = {{ backgroundColor: '#191919' }}
+      > 
       { smallScreen
           ? (
             <div className = "w-full flex justify-end">
@@ -75,9 +78,9 @@ export const Nav = () => {
                 <Image
                   src ={"/images/me.jpeg"}
                   alt="Picture of laptop" 
-                  className = "rounded-full"
-                  width = {45}
-                  height = {45} >
+                  className = "rounded-full mb-2"
+                  width = {35}
+                  height = {35} >
                 </Image>
                 <p>Chantelle Conlon Scoullar</p>
               </section>

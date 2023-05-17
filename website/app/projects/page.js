@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import React from "react"
 import { FilterBtn } from "../components/FilterBtn"
 import { FiltersList } from "../components/FiltersList"
@@ -14,10 +13,12 @@ export default function Projects() {
 
   }
 
+  React.useEffect(() => {
+    localStorage.getItem !== null && setActiveFilter(window.localStorage.getItem('projects filter'))
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between font-light" style = {{ backgroundColor: '#191919' }}
-    >
-      <div className = 'pt-40 w-2/5 flex flex-row justify-between'>
+      <div className = 'pt-40 w-2/5 flex flex-row flex-wrap md:justify-between justify-center space-x-5 md:space-x-0'>
         <h1 className= "text-neutral-400 text-2xl"> Recent Projects</h1>
         {
           showFilters
@@ -36,6 +37,5 @@ export default function Projects() {
             : <FilterBtn setFilterOn = {() => setShowFilters(true)}/>
         }
       </div>
-    </main>
   )
  }
