@@ -20,6 +20,7 @@ export const FiltersList = ({ filters, onClose }) => {
        {
         filters.map(filter => 
           <div 
+            key = {filter}
             className = "hover:underline hover:cursor-pointer"
             onClick = { () => filterClicked(filter) }
           >

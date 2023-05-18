@@ -31,7 +31,9 @@ export default function Projects() {
         >
             {
               projects.map(project =>
-                <button className = "h-[250px] w-[260px] transition transform hover:-translate-y-1 overflow-hidden"
+                <button 
+                  className = "h-[250px] w-[260px] transition transform hover:-translate-y-1 overflow-hidden"
+                  key = {project.name}
                 >
                   <div
                     className = "h-[250px] w-[260px] bg-cover bg-center"
@@ -49,6 +51,7 @@ export default function Projects() {
                   >
                     {project.name.toUpperCase()}
                   </p>
+                  <div>hi</div>
               </button>
               )
             }
