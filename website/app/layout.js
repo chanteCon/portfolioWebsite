@@ -18,15 +18,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <Nav />
         <main
-        className="flex min-h-screen flex-col items-center justify-between font-light relative" 
+        className="flex min-h-screen flex-col items-center justify-between font-light" 
          >
          <BackgroundImage 
-          className = "w-full h-full"
+          className = "w-screen h-screen"
          />
           {children}
         </main>
+        <Nav/>
       </body>
     </html>
   )
