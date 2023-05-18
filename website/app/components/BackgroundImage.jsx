@@ -6,11 +6,11 @@
 import styled from "@emotion/styled"
 
 export const BackgroundImage = styled('div')({
-  position: 'absolute',
+  position: 'fixed',
   zIndex: '-1',
   backgroundImage: 'url(/images/background.jpg)',
   backgroundSize: 'cover',
   backgroundColor: 'rgba(25, 25, 25, 0.8)',
   backgroundBlendMode: 'darken',
-  backgroundRepeat: 'no-repeat'
+  backgroundRepeat: 'repeat'
 })
