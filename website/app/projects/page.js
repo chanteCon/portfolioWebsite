@@ -1,9 +1,10 @@
 "use client"
-import Image from "next/image"
+
 import data from "data/projects.json"
 import React from "react"
 import { FilterBtn } from "../components/FilterBtn"
 import { FiltersList } from "../components/FiltersList"
+import { SmallTick } from "../components/smallTick"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "Java", "JavaScript", "Python", "Solidity"]
@@ -60,14 +61,7 @@ export default function Projects() {
                     >
                       {project.skills[0].toUpperCase()}
                     </p>
-                    <Image
-                      src = {"/images/icons/tickIcon.png"}
-                      alt = ""
-                      width = {18}
-                      height = {18}
-                      className= "object-contain"
-                    >
-                    </Image>
+                    <SmallTick />
                   </div>
                   <div>hi</div>
               </button>
