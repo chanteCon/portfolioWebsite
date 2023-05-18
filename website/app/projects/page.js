@@ -65,7 +65,7 @@ export default function Projects() {
                     className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
                     onClick = { () => setShowFilters(false) }
                   ></div>
-                  <div className = "absolute z-600">
+                  <div className = "absolute z-600 sm:right-[26%] right-[10%]">
                   <FiltersList
                     filters = { filters }
                     onClose = { () => setShowFilters(false) }
