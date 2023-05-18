@@ -30,7 +30,7 @@ export const Nav = () => {
   // if screen size small then collapse navbar
   return (
     <div 
-      className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10 font-light relative z-4000"
+      className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0"
       style = {{ backgroundColor: '#191919' }}
       > 
       { smallScreen
