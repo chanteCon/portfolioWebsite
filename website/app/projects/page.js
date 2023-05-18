@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import data from "data/projects.json"
 import React from "react"
 import { FilterBtn } from "../components/FilterBtn"
@@ -22,12 +23,12 @@ export default function Projects() {
 
   return (
     <div className = "w-full flex justify-center pb-20">
-      <div className = 'pt-20 h-screen lg:w-[60%] flex flex-col'>
+      <div className = 'pt-20 h-screen lg:w-[60%] 2xl:w-[50%] flex flex-col'>
         <div className = "w-[60%] flex justify-end">
           <h1 className= "text-neutral-300 text-3xl mt-[25px] font-extralight"> Recent Projects</h1>
         </div>
         <div
-          className = "pt-20 flex flex-wrap justify-center text-3xl text-center gap-7 pb-[30px]"
+          className = "pt-20 flex flex-wrap justify-center text-3xl text-center gap-7 pb-[30px] justify-self-center"
         >
             {
               projects.map(project =>
@@ -36,7 +37,7 @@ export default function Projects() {
                   key = {project.name}
                 >
                   <div
-                    className = "h-[250px] w-[260px] bg-cover bg-center"
+                    className = "h-[250px] w-[260px] xl:h-[300px] xl:w-[310px] bg-cover bg-center"
                     style = {{
                       backgroundImage: `url(${project.images.mainImage})`,
                       backgroundColor: 'rgba(242, 234, 232, 0.4)',
@@ -47,17 +48,34 @@ export default function Projects() {
                     >
                   </div>
                   <p
-                    style = {{ position: "relative", bottom: "140px" }}
+                    className = "relative bottom-[140px] xl:bottom-[190px]"
                   >
                     {project.name.toUpperCase()}
                   </p>
+                  <div
+                    className = "absolute top-[7px] right-[7px] w-[115px] h-[30px] bg-[#373737] rounded-3xl flex justify-between px-4"
+                  >
+                    <p
+                      className = "text-white text-sm self-center"
+                    >
+                      {project.skills[0].toUpperCase()}
+                    </p>
+                    <Image
+                      src = {"/images/icons/tickIcon.png"}
+                      alt = ""
+                      width = {18}
+                      height = {18}
+                      className= "object-contain"
+                    >
+                    </Image>
+                  </div>
                   <div>hi</div>
               </button>
               )
             }
         </div>
       </div >
-      <div className = "absolute sm:right-[26%] top-[110px] right-[10%]">
+      <div className = "absolute sm:right-[26%] top-[110px] right-[10%] self-center">
             {
               showFilters
                 ? <>
