@@ -10,6 +10,7 @@ export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "Java", "JavaScript", "Python", "Solidity"]
   const [showFilters, setShowFilters] = React.useState(false)
   const [activeFilter, setActiveFilter] = React.useState('All')
+  const [hideImgCard, setHideImgCard] = React.useState('')
   const projects = data.projects
 
   console.log(projects)
@@ -33,9 +34,22 @@ export default function Projects() {
         >
             {
               projects.map(project =>
+                hideImgCard === project.name 
+                ? 
                 <button 
-                  className = "h-[250px] w-[260px] transition transform hover:-translate-y-1 overflow-hidden"
+                  className = "h-[250px] w-[260px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8]"
                   key = {project.name}
+                  onMouseOut = { () => {setHideImgCard('')} }
+                >
+                  <p className= " text-lg " >
+                    {project.name.toUpperCase()}</p>
+                  <p>{project.descriptions.projectsPage}</p>
+                </button>
+
+                : <button 
+                  className = "h-[250px] w-[260px] overflow-hidden"
+                  key = {project.name}
+                  onMouseOver = { () => {setHideImgCard(project.name)} }
                 >
                   <div
                     className = "h-[250px] w-[260px] xl:h-[300px] xl:w-[310px] bg-cover bg-center"
