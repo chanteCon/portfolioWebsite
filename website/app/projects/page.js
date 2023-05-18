@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image"
 import data from "data/projects.json"
 import React from "react"
 import { FilterBtn } from "../components/FilterBtn"
@@ -36,18 +36,50 @@ export default function Projects() {
               projects.map(project =>
                 hideImgCard === project.name 
                 ? 
-                <button 
-                  className = "h-[250px] w-[260px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8]"
+                <div 
+                  className = "h-[250px] w-[260px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8] relative pt-[40px]"
                   key = {project.name}
-                  onMouseOut = { () => {setHideImgCard('')} }
+                  onMouseLeave = { () => {setHideImgCard('')} }
                 >
-                  <p className= " text-lg " >
-                    {project.name.toUpperCase()}</p>
+                  <p className= " text-md " >{project.name.toUpperCase()}</p>
+                  
                   <p>{project.descriptions.projectsPage}</p>
-                </button>
-
-                : <button 
-                  className = "h-[250px] w-[260px] overflow-hidden"
+                   <div
+                    className = "absolute top-[7px] right-[7px] w-[100px] h-[25px] bg-[#373737] rounded-3xl flex justify-between px-4"
+                  >
+                    <p
+                      className = "text-white text-xs self-center"
+                    >
+                      {project.skills[0].toUpperCase()}
+                    </p>
+                    <SmallTick />
+                  </div>
+                  <div className = "pt-[10px] flex justify-center gap-3">
+                  {
+                      project.links.map(link => 
+                      link.type !== "video" && <button
+                        className = "h-[30px] w-[75px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex"
+                      >
+                      <a 
+                        className = "self-center " 
+                        style = {{ lineHeight: '0.9' }}
+                        href = {link.link}
+                      >{link.name}</a>
+                      <img
+                        src = '/images/icons/externalLinkBlack.png'
+                        className = "w-[15px] h-[15px] self-center"
+                      />
+                    </button>)
+                  }
+                  <button
+                        className = "h-[30px] w-[75px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex"
+                  > MORE +
+                  </button>
+                  </div>
+                </div>
+                : 
+                <div 
+                  className = "h-[250px] w-[260px] overflow-hidden relative"
                   key = {project.name}
                   onMouseOver = { () => {setHideImgCard(project.name)} }
                 >
@@ -77,8 +109,7 @@ export default function Projects() {
                     </p>
                     <SmallTick />
                   </div>
-                  <div>hi</div>
-              </button>
+              </div>
               )
             }
         </div>
