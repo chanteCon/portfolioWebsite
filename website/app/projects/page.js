@@ -24,26 +24,7 @@ export default function Projects() {
     <div className = "w-full flex justify-center pb-20">
       <div className = 'pt-20 h-screen lg:w-[60%] flex flex-col'>
         <div className = "w-[60%] flex justify-end">
-          <h1 className= "text-neutral-300 text-3xl mt-[25px]"> Recent Projects</h1>
-          <div className = "absolute sm:right-[26%] top-[110px] right-[10%]">
-            {
-              showFilters
-                ? <>
-                  <div
-                    className = "w-screen h-screen fixed top-0 left-0 absolute z-500"
-                    onClick = { () => setShowFilters(false) }
-                  ></div>
-                  <div className = "">
-                  <FiltersList
-                    filters = { filters }
-                    onClose = { () => setShowFilters(false) }
-                  />
-                  </div>
-                  </>
-                : <FilterBtn
-                  setFilterOn = {() => setShowFilters(true)}/>
-            }
-          </div>
+          <h1 className= "text-neutral-300 text-3xl mt-[25px] font-extralight"> Recent Projects</h1>
         </div>
         <div
           className = "pt-20 flex flex-wrap justify-center text-3xl text-center gap-7 pb-[30px]"
@@ -73,6 +54,25 @@ export default function Projects() {
             }
         </div>
       </div >
+      <div className = "absolute sm:right-[26%] top-[110px] right-[10%]">
+            {
+              showFilters
+                ? <>
+                  <div
+                    className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
+                    onClick = { () => setShowFilters(false) }
+                  ></div>
+                  <div className = "absolute z-600">
+                  <FiltersList
+                    filters = { filters }
+                    onClose = { () => setShowFilters(false) }
+                  />
+                  </div>
+                  </>
+                : <FilterBtn
+                  setFilterOn = {() => setShowFilters(true)}/>
+            }
+          </div>
     </div>
   )
  }
