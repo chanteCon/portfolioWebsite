@@ -21,7 +21,7 @@ console.log(activeFilter)
 
   return (
     <div className = "w-full flex justify-center pb-20">
-      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col'>
+      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col 2xl:ml-[9%]'>
         <div className = "w-[62%] lg:w-[50%] flex justify-end">
           <div className = "flex flex-col">
             <h1 className= "text-neutral-300 text-2xl sm:text-3xl mt-[25px] font-extralight"> Recent Projects </h1>
