@@ -5,7 +5,7 @@
       "gitRepo": null,
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
-          "projectsPage": "A short escape room inspired thriller game. This project was built using Unreal Engine 4 with blueprints. NIGHTCARE won the UNSW Computer Science and Engineering best projects award in the Introduction to Computer Graphics course.",
+          "projectsPage": "A short escape room inspired thriller game. This project was built using Unreal Engine 4 with blueprints. NIGHTCARE won the UNSW Computer Science and Engineering Top Project award.",
           "full": ""
       },
       "released": true,
@@ -34,7 +34,7 @@
       "gitRepo": "https://github.com/schummd/supply-chain",
       "descriptions": {
           "homepage": "An application tracking the certification and conditions of organic fruit via the blockchain.",
-          "projectsPage": "A proof of concept organic fruit supply chain tracking application.  Using the immutability and transparency of the blockchain we are able to track the certification and conditions of organic fruit as it moves through the supply chain.",
+          "projectsPage": "Using the immutability and transparency of the blockchain we were able to track the certification and conditions of organic fruit as it moves through the supply chain.",
           "full": ""
       },
       "release": false,
@@ -60,7 +60,7 @@
       "gitRepo": null,
       "descriptions": {
           "homepage": "",
-          "projectsPage": "A software as a service project that involved designing and implementing an API for an invoice receiving platform. The system allows invoices to be sent between users or uploaded via email. An authorised user can then log on and receive all invoices sent to them this way. The final result was an end-to-end solution.",
+          "projectsPage": "A software as a service project that involved designing and implementing an API for an invoice receiving platform. A user could log on and see all invoices they had received.",
           "full": ""
       },
       "release": false,
@@ -80,7 +80,7 @@
       "name": "Dungeon Mania",
       "gitRepo": null,
       "descriptions": {
-          "projectsPage": "This project involved building the backend for a basic dungeon crawler game. The goal of this project was to learn object oriented design patterns. For example, during the game if the player drank a potion then enemies would respond differently during battles against the player. To notify enemies that the player had drunk a potion we used the observer pattern, with the player as the subject and the enemies as the observers. We then used the strategy pattern to determine how the enemy responded during battle. When the enemy was notified that a player had consumed a potion, they update their battle strategy accordingly.",
+          "projectsPage": "This project involved building the backend for a basic dungeon crawler game. This was an object oriented project with multiple OOP design patterns incorporated.",
           "full": ""
       },
       "released": false,
@@ -97,7 +97,7 @@
       "gitRepo": null,
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
-          "projectsPage": "This project involved designing the backend for a Microsoft teams like clone. The application included: direct messaging, group chats with permission levels and profiles. This project also included an authentication and authorisation system.",
+          "projectsPage": "This project involved designing the backend for a Microsoft teams like clone. Like on Teams, a user could log on, form group chats, send dms and view profiles.",
           "full": ""
       },
       "released": false,
@@ -114,7 +114,7 @@
       "gitRepo": "https://github.com/chanteCon/portfolioWebsite",
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
-          "projectsPage": "This website was developed to showcase some of my recent coding work. In addition to showcasing my past work, this project allows me to polish my ability to produce a professional looking application.",
+          "projectsPage": "This website was developed using NextJs 13. The purpose of this site is to simultaneously showcase my past projects and my frontend development skills",
           "full": ""
       },
       "released": true,
