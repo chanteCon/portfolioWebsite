@@ -69,6 +69,7 @@ export default function Projects() {
                   }
                     <Link
                           className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black"
+                          style = {{ lineHeight: '30px' }}
                           href = {`/projects/${project.name}`}
                           
                     > MORE +
