@@ -1,10 +1,11 @@
 "use client"
-import Image from "next/image"
+
 import data from "data/projects.json"
 import React from "react"
 import { FilterBtn } from "../components/FilterBtn"
 import { FiltersList } from "../components/FiltersList"
 import { SmallTick } from "../components/smallTick"
+import { RecentProjTitle } from "../components/RecentProjTitle"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "Java", "JavaScript", "Python", "Solidity"]
@@ -17,23 +18,12 @@ export default function Projects() {
     localStorage.getItem === null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
   }, [showFilters]);
 
-console.log(activeFilter)
-
   return (
     <div className = "w-full flex justify-center pb-20">
       <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col 2xl:ml-[9%]'>
-        <div className = "w-[62%] lg:w-[50%] flex justify-end">
-          <div className = "flex flex-col">
-            <h1 className= "text-neutral-300 text-2xl sm:text-3xl mt-[25px] font-extralight"> Recent Projects </h1>
-            {
-              activeFilter !== "All" && 
-              <h1 
-                className= "text-neutral-300 text-xl font-extralight">
-                  {`${activeFilter} projects`}
-              </h1> }
-          </div>
-        </div>
-        <div
+        <RecentProjTitle activeFilter = {activeFilter}/>
+        {/* Project cards container */}
+        <section
           className = "pt-20 flex flex-wrap text-3xl text-center gap-7 pb-[30px] justify-center lg:justify-start"
         >
             { 
@@ -52,21 +42,20 @@ console.log(activeFilter)
                   <div className = "flex justify-center gap-3">
                   {
                       project.links.map(link =>
-                      link.type !== "video" && <button
-                        className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex px-[10px]"
-                      >
+                      link.type !== "video" && 
                       <a
-                        className = "self-center"
                         style = {{ lineHeight: '0.9' }}
                         href = {link.link}
                         target = "_blank"
                         rel="noreferrer noopener"
-                      >{link.name}</a>
-                      <img
-                        src = '/images/icons/externalLinkBlack.png'
+                        className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex px-[10px]"
+                      >
+                      <p className = "self-center" >{link.name}</p>
+                      <img 
                         className = "w-[15px] h-[15px] self-center"
+                        src = '/images/icons/externalLinkBlack.png'
                       />
-                    </button>)
+                    </a>)
                   }
                     <button
                           className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black"
@@ -119,9 +108,11 @@ console.log(activeFilter)
               </div>
               )
             }
-        </div>
+        </section>
       </div >
-      <div className = "absolute lg:right-[35%] top-[110px] right-[10%] self-center">
+
+      {/* Buttons for filter and filter list */}
+      <div className = "absolute lg:right-[35%] top-[110px] right-[8%] self-center">
             {
               showFilters
                 ? <>
@@ -129,7 +120,7 @@ console.log(activeFilter)
                     className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
                     onClick = { () => setShowFilters(false) }
                   ></div>
-                  <div className = "absolute z-600 lg:right-[35%] right-[10%] ">
+                  <div className = "absolute z-600 lg:right-[35%] right-[8%] ">
                   <FiltersList
                     filters = { filters }
                     onClose = { () => setShowFilters(false) }
