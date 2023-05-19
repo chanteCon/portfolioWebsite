@@ -2,6 +2,7 @@
   "projects" : [
     {
       "name": "Nightcare",
+      "filters": ["Games", "Released/Deployed", "Blueprints", "All"],
       "gitRepo": null,
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
@@ -31,6 +32,7 @@
     },
     {
       "name": "Fruit Supply",
+      "filters": ["Blockchain", "Source code", "Solidity", "JavaScript", "All"],
       "gitRepo": "https://github.com/schummd/supply-chain",
       "descriptions": {
           "homepage": "An application tracking the certification and conditions of organic fruit via the blockchain.",
@@ -57,6 +59,7 @@
     },
     {
       "name": "Invoice Receive",
+      "filters": ["Web, Source code", "JavaScript", "Python", "All"],
       "gitRepo": null,
       "descriptions": {
           "homepage": "",
@@ -78,6 +81,7 @@
     },
     {
       "name": "Dungeon Mania",
+      "filters": ["Web", "Games", "Java", "All"],
       "gitRepo": null,
       "descriptions": {
           "projectsPage": "This project involved building the backend for a basic dungeon crawler game. This was an object oriented project with multiple OOP design patterns incorporated.",
@@ -94,6 +98,7 @@
     },
     {
       "name": "Streams",
+      "filters": ["Web", "Python", "All"],
       "gitRepo": null,
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
@@ -111,6 +116,7 @@
     },
     {
       "name": "This Website",
+      "filters": ["Web", "Released/Deployed", "Source code", "JavaScript", "All"],
       "gitRepo": "https://github.com/chanteCon/portfolioWebsite",
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",

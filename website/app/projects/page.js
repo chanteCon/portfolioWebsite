@@ -13,15 +13,11 @@ export default function Projects() {
   const [hideImgCard, setHideImgCard] = React.useState('')
   const projects = data.projects
 
-  console.log(projects)
-
-  const filterBy = (filter) => {
-
-  }
-
   React.useEffect(() => {
-    localStorage.getItem !== null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
-  }, []);
+    localStorage.getItem === null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
+  }, [showFilters]);
+
+console.log(activeFilter)
 
   return (
     <div className = "w-full flex justify-center pb-20">
@@ -32,8 +28,8 @@ export default function Projects() {
         <div
           className = "pt-20 flex flex-wrap justify-center text-3xl text-center gap-7 pb-[30px] justify-self-center"
         >
-            {
-              projects.map(project =>
+            { 
+              projects.filter(project => project.filters.includes(activeFilter)).map(project =>
                 hideImgCard === project.name 
                 ? 
                 <div 
