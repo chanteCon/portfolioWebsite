@@ -41,27 +41,18 @@ export default function Projects() {
                   key = {project.name}
                   onMouseLeave = { () => {setHideImgCard('')} }
                 >
-                  <p className= " text-md " >{project.name.toUpperCase()}</p>
-                  
-                  <p>{project.descriptions.projectsPage}</p>
-                   <div
-                    className = "absolute top-[7px] right-[7px] w-[100px] h-[25px] bg-[#373737] rounded-3xl flex justify-between px-4"
-                  >
-                    <p
-                      className = "text-white text-xs self-center"
-                    >
-                      {project.skills[0].toUpperCase()}
-                    </p>
-                    <SmallTick />
-                  </div>
-                  <div className = "pt-[10px] flex justify-center gap-3">
+                <p className= " text-md " >{project.name.toUpperCase()}</p>
+                  <p
+                    className= "p-[15px]" > {project.descriptions.projectsPage}
+                  </p>
+                  <div className = "flex justify-center gap-3">
                   {
-                      project.links.map(link => 
+                      project.links.map(link =>
                       link.type !== "video" && <button
-                        className = "h-[30px] w-[75px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex"
+                        className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex px-[10px]"
                       >
-                      <a 
-                        className = "self-center " 
+                      <a
+                        className = "self-center"
                         style = {{ lineHeight: '0.9' }}
                         href = {link.link}
                         target = "_blank"
@@ -73,10 +64,20 @@ export default function Projects() {
                       />
                     </button>)
                   }
-                  <button
-                        className = "h-[30px] w-[75px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex"
-                  > MORE +
-                  </button>
+                    <button
+                          className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black"
+                    > MORE +
+                    </button>
+                </div>
+                   <div
+                    className = "absolute top-[7px] right-[7px] w-[100px] h-[25px] bg-[#373737] rounded-3xl flex justify-between px-4"
+                  >
+                    <p
+                      className = "text-white text-xs self-center"
+                    >
+                      {project.skills[0].toUpperCase()}
+                    </p>
+                    <SmallTick />
                   </div>
                 </div>
                 : 
