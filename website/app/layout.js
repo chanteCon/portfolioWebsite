@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
       >
         <main
-        className="flex min-h-screen flex-col items-center justify-between font-light" 
+        className="flex min-h-screen flex-col items-center justify-between font-light pb-[20px]" 
          >
          <BackgroundImage 
           className = "w-screen h-screen"

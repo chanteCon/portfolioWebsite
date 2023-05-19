@@ -6,6 +6,8 @@ import { FilterBtn } from "../components/FilterBtn"
 import { FiltersList } from "../components/FiltersList"
 import { SmallTick } from "../components/smallTick"
 import { RecentProjTitle } from "../components/RecentProjTitle"
+import { BlurImage } from "../components/BlurImage"
+import Link from "next/link"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "Java", "JavaScript", "Python", "Solidity"]
@@ -13,21 +15,29 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = React.useState('All')
   const [hideImgCard, setHideImgCard] = React.useState('')
   const projects = data.projects
+  const displayProjects = projects.filter(project => project.filters.includes(activeFilter))
 
   React.useEffect(() => {
     localStorage.getItem === null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
   }, [showFilters]);
 
+  const alignProjects = () => {
+    const style = "pt-20 flex flex-wrap text-3xl text-center gap-7 pb-[30px] justify-center"
+    return (displayProjects.length % 2 === 0 || displayProjects.length === 1)
+    ? style
+    : style.concat(" ", "lg:justify-start")
+  }
+
   return (
     <div className = "w-full flex justify-center pb-20">
-      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col 2xl:ml-[9%]'>
+      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col xl:ml-[9%] '>
         <RecentProjTitle activeFilter = {activeFilter}/>
         {/* Project cards container */}
         <section
-          className = "pt-20 flex flex-wrap text-3xl text-center gap-7 pb-[30px] justify-center lg:justify-start"
+          className = {alignProjects()}
         >
             { 
-              projects.filter(project => project.filters.includes(activeFilter)).map(project =>
+              displayProjects.map(project =>
                 hideImgCard === project.name 
                 ? 
                 <div 
@@ -57,10 +67,12 @@ export default function Projects() {
                       />
                     </a>)
                   }
-                    <button
+                    <Link
                           className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black"
+                          href = {`/projects/${project.name}`}
+                          
                     > MORE +
-                    </button>
+                    </Link>
                 </div>
                    <div
                     className = "absolute top-[7px] right-[7px] w-[100px] h-[25px] bg-[#373737] rounded-3xl flex justify-between px-4"
@@ -79,17 +91,13 @@ export default function Projects() {
                   key = {project.name}
                   onMouseOver = { () => {setHideImgCard(project.name)} }
                 >
-                  <div
+                  <BlurImage
                     className = "h-[250px] w-[260px] xl:h-[300px] xl:w-[310px] bg-cover bg-center"
                     style = {{
                       backgroundImage: `url(${project.images.mainImage})`,
-                      backgroundColor: 'rgba(242, 234, 232, 0.4)',
-                      backgroundBlendMode: 'screen',
-                      filter: 'blur(1.5px)',
-                      transform: 'scale(1.01)'
                     }}
                     >
-                  </div>
+                  </BlurImage>
                   <p
                     className = "relative bottom-[140px] xl:bottom-[190px]"
                   >
@@ -112,7 +120,7 @@ export default function Projects() {
       </div >
 
       {/* Buttons for filter and filter list */}
-      <div className = "absolute lg:right-[35%] top-[110px] right-[8%] self-center">
+      <div className = "absolute lg:right-[30%] top-[110px] right-[8%] self-center">
             {
               showFilters
                 ? <>
@@ -120,7 +128,7 @@ export default function Projects() {
                     className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
                     onClick = { () => setShowFilters(false) }
                   ></div>
-                  <div className = "absolute z-600 lg:right-[35%] right-[8%] ">
+                  <div className = "absolute z-600 lg:right-[30%] right-[8%] ">
                   <FiltersList
                     filters = { filters }
                     onClose = { () => setShowFilters(false) }

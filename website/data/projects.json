@@ -7,12 +7,11 @@
       "descriptions": {
           "homepage": "A short escape room inspired thriller game developed using Unreal Engine 4 Blueprints.",
           "projectsPage": "A short escape room inspired thriller game. This project was built using Unreal Engine 4 with blueprints. NIGHTCARE won the UNSW Computer Science and Engineering Top Project award.",
-          "full": ""
+          "full": "NIGHTCARE is a thriller game that is centered around the concept of an escape room. The player must find various items and use them correctly to escape. You play as a toddler and we leverage this perspective to heighten the tension. Everything is much bigger than you and every day objects are out of your each. You must use logic to escape. However, you are not alone and will find a threatening friend who can help you escape. \nThis project was developed in Unreal Engine 4 using blueprints."
       },
-      "released": true,
       "links": [
         {
-          "type": "Download",
+          "type": "Release",
           "name": "Download",
           "link": "https://rinade.itch.io/nightcare"
         },
@@ -39,7 +38,6 @@
           "projectsPage": "Using the immutability and transparency of the blockchain we were able to track the certification and conditions of organic fruit as it moves through the supply chain.",
           "full": ""
       },
-      "release": false,
       "links": [
         {
           "type": "repo",
@@ -66,7 +64,6 @@
           "projectsPage": "A software as a service project that involved designing and implementing an API for an invoice receiving platform. A user could log on and see all invoices they had received.",
           "full": ""
       },
-      "release": false,
       "links": [
         {
           "type": "documentation",
@@ -87,7 +84,6 @@
           "projectsPage": "This project involved building the backend for a basic dungeon crawler game. This was an object oriented project with multiple OOP design patterns incorporated.",
           "full": ""
       },
-      "released": false,
       "skills": ["java"],
       "contributions": "",
       "links": [],
@@ -105,7 +101,6 @@
           "projectsPage": "This project involved designing the backend for a Microsoft teams like clone. Like on Teams, a user could log on, form group chats, send dms and view profiles.",
           "full": ""
       },
-      "released": false,
       "skills": ["Python", "python flask"],
       "contributions": "",
       "links": [],
@@ -123,11 +118,10 @@
           "projectsPage": "This website was developed using NextJs 13. The purpose of this site is to simultaneously showcase my past projects and my frontend development skills",
           "full": ""
       },
-      "released": true,
       "links": [
         {
           "type": "repo",
-          "name": "git repo",
+          "name": "Source code",
           "link": "https://github.com/chanteCon/portfolioWebsite"
         }
       ],
