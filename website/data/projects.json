@@ -67,7 +67,7 @@
       "links": [
         {
           "type": "documentation",
-          "name": "API documentation",
+          "name": "Swagger doc",
           "link": "https://app.swaggerhub.com/apis-docs/chanteCon/FUDGE_W14A/2.0"
         }
       ],

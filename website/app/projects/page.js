@@ -64,6 +64,8 @@ export default function Projects() {
                         className = "self-center " 
                         style = {{ lineHeight: '0.9' }}
                         href = {link.link}
+                        target = "_blank"
+                        rel="noreferrer noopener"
                       >{link.name}</a>
                       <img
                         src = '/images/icons/externalLinkBlack.png'
