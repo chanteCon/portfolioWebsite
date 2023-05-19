@@ -21,12 +21,20 @@ console.log(activeFilter)
 
   return (
     <div className = "w-full flex justify-center pb-20">
-      <div className = 'pt-20 h-screen lg:w-[60%] 2xl:w-[50%] flex flex-col'>
-        <div className = "w-[60%] flex justify-end">
-          <h1 className= "text-neutral-300 text-3xl mt-[25px] font-extralight"> {`Recent Projects - ${activeFilter}`}</h1>
+      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col'>
+        <div className = "w-[62%] lg:w-[50%] flex justify-end">
+          <div className = "flex flex-col">
+            <h1 className= "text-neutral-300 text-2xl sm:text-3xl mt-[25px] font-extralight"> Recent Projects </h1>
+            {
+              activeFilter !== "All" && 
+              <h1 
+                className= "text-neutral-300 text-xl font-extralight">
+                  {`${activeFilter} projects`}
+              </h1> }
+          </div>
         </div>
         <div
-          className = "pt-20 flex flex-wrap justify-center text-3xl text-center gap-7 pb-[30px] justify-self-center"
+          className = "pt-20 flex flex-wrap text-3xl text-center gap-7 pb-[30px] justify-center lg:justify-start"
         >
             { 
               projects.filter(project => project.filters.includes(activeFilter)).map(project =>
@@ -113,7 +121,7 @@ console.log(activeFilter)
             }
         </div>
       </div >
-      <div className = "absolute sm:right-[26%] top-[110px] right-[10%] self-center">
+      <div className = "absolute lg:right-[35%] top-[110px] right-[10%] self-center">
             {
               showFilters
                 ? <>
@@ -121,7 +129,7 @@ console.log(activeFilter)
                     className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
                     onClick = { () => setShowFilters(false) }
                   ></div>
-                  <div className = "absolute z-600 sm:right-[26%] right-[10%]">
+                  <div className = "absolute z-600 lg:right-[35%] right-[10%] ">
                   <FiltersList
                     filters = { filters }
                     onClose = { () => setShowFilters(false) }
