@@ -10,8 +10,7 @@ export default function ProjectPage ({ params })  {
   const name = params.name.replace("%20"," ")
   const project = data.projects.find(proj => proj.name === name)
   const video = project.links.find(link => (link.type === "video"))
-  const url = VideoEmbeds(video.link)
-  console.log(`The url is ${url}`)
+  const url =video ? VideoEmbeds(video.link) : ""
 
   const boxCardStyle = "w-[200px] h-[200px] flex flex-col justify-evenly bg-[#262626] text-[#F2EAE8] p-[40px] text-left rounded"
 
