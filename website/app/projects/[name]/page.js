@@ -1,5 +1,3 @@
-"use-client"
-
 import React from 'react';
 import data from "data/projects.json"
 import { BlurImage } from '@/app/components/BlurImage';
@@ -35,12 +33,13 @@ export default function ProjectPage ({ params })  {
       </div>
       {
         video && 
-        <div>
+        <div className = "align-center relative h-0 pb-[56.25%]">
           <p>{video.name}</p>
           <iframe 
+            className = "absolute left-0 top-0"
             src = {url} 
-            width = "300px"
-            height = "300px"
+            width = "100%"
+            height = "100%"
           />
         </div>
       }
