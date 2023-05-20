@@ -31,18 +31,6 @@ export default function ProjectPage ({ params })  {
             {project.name.toUpperCase()}
           </p>
       </div>
-      {
-        video && 
-        <div className = "align-center relative h-0 pb-[56.25%]">
-          <p>{video.name}</p>
-          <iframe 
-            className = "absolute left-0 top-0"
-            src = {url} 
-            width = "100%"
-            height = "100%"
-          />
-        </div>
-      }
       <section className = "flex flex-wrap justify-center xl:gap-[10px] gap-[20px]">
       <div>
         <p >Skills</p>
@@ -80,6 +68,18 @@ export default function ProjectPage ({ params })  {
         </div>
       </div>
     </section>
+    {
+        video && 
+        <div className = "align-center relative h-0 pb-[56.25%] mb-[40px]">
+          <p>{video.name}</p>
+          <iframe 
+            className = "absolute left-0 top-[40px]"
+            src = {url} 
+            width = "100%"
+            height = "100%"
+          />
+        </div>
+      }
     <h1 className = "text-[#F2EAE8] text-lg" > {`What is ${project.name}?`} </h1>
     <div className = "w-full flex justify-center bg-[#262626] p-[40px] rounded mt-[-35px] text-left" >
       {project.descriptions.full}
