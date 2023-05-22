@@ -10,7 +10,7 @@ export const Nav = () => {
   const [showNavItems, setShowNavItems] = useState(false)
 
   const checkScreenSize = () => {
-    window.innerWidth <= 700 
+    window.innerWidth <= 640 
       ? setSmallScreen(true)
       : setSmallScreen(false)
   }
@@ -24,12 +24,15 @@ export const Nav = () => {
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-amber-600 font-bold'
+    if (link === pathname) return 'text-red-300 font-light'
     return 'text-neutral-400' 
   }
   // if screen size small then collapse navbar
   return (
-    <div className= "w-full text-neutral-400 text-sm pt-3 fixed flex justify-between px-10"> 
+    <div 
+      className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0"
+      style = {{ backgroundColor: '#191919' }}
+      > 
       { smallScreen
           ? (
             <div className = "w-full flex justify-end">
@@ -37,11 +40,11 @@ export const Nav = () => {
                 className = {showNavItems && `text-right`}
               >
               <button
-                className="hover:text-amber-600"
+                className="hover:text-red-300"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? 'x' : 
                   <Image 
-                    src = {"/images/hamburgerIcon.png"}
+                    src = {"/images/icons/hamburgerIcon.png"}
                     width = {17}
                     height = {17}
                   >
@@ -52,16 +55,16 @@ export const Nav = () => {
                 showNavItems &&
                 <div className = "flex flex-col space-y-1">
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/">Home</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/projects">Projects</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="/about">About Me</a>
                 <a
-                  className="hover:text-amber-600"
+                  className="hover:text-red-300"
                   href="#">Contact</a>
               </div>
               }
@@ -75,9 +78,9 @@ export const Nav = () => {
                 <Image
                   src ={"/images/me.jpeg"}
                   alt="Picture of laptop" 
-                  className = "rounded-full"
-                  width = {45}
-                  height = {45} >
+                  className = "rounded-full mb-2"
+                  width = {35}
+                  height = {35} >
                 </Image>
                 <p>Chantelle Conlon Scoullar</p>
               </section>

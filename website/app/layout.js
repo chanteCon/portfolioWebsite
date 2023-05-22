@@ -1,9 +1,10 @@
 import './globals.css'
 import { Roboto } from 'next/font/google';
 import { Nav } from './components/Nav';
+import { BackgroundImage } from './components/BackgroundImage';
 
 const roboto = Roboto({
-  weight: '300',
+  weight: ['100', '300', '400', '500', '700', '900'],
   subsets: ['latin'],
 });
  
@@ -16,10 +17,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <Nav></Nav>
-        {children}
+      <body 
+        className={roboto.className}
+        suppressHydrationWarning={true}
+      >
+        <main
+        className="flex min-h-screen flex-col items-center justify-between font-light pb-[20px]" 
+         >
+         <BackgroundImage 
+          className = "w-screen h-screen"
+         />
+          {children}
+        </main>
+        <Nav/>
       </body>
     </html>
   )
 }
+ 
