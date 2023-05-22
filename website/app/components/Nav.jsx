@@ -24,7 +24,7 @@ export const Nav = () => {
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-red-300 font-light'
+    if (link === pathname) return 'text-[#F6A693] font-light'
     return 'text-neutral-400' 
   }
   // if screen size small then collapse navbar
@@ -40,7 +40,7 @@ export const Nav = () => {
                 className = {showNavItems && `text-right`}
               >
               <button
-                className="hover:text-red-300"
+                className="hover:text-[#F6A693]"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? 'x' : 
                   <Image 
@@ -55,17 +55,17 @@ export const Nav = () => {
                 showNavItems &&
                 <div className = "flex flex-col space-y-1">
                 <a
-                  className="hover:text-red-300"
+                  className="hover:text-[#F6A693]"
                   href="/">Home</a>
                 <a
-                  className="hover:text-red-300"
+                  className="hover:text-[#F6A693]"
                   href="/projects">Projects</a>
                 <a
-                  className="hover:text-red-300"
+                  className="hover:text-[#F6A693]"
                   href="/about">About Me</a>
                 <a
-                  className="hover:text-red-300"
-                  href="#">Contact</a>
+                  className="hover:text-[#F6A693]"
+                  href="/contact">Contact</a>
               </div>
               }
                         </div>
@@ -100,9 +100,11 @@ export const Nav = () => {
                   <Link 
                     href = '/about'
                     className = {isActiveLink('/about')}
-                  >
-                    About Me</Link>
-                  <div>Contact</div>
+                  > About </Link>
+                  <Link 
+                    href = '/contact'
+                    className = {isActiveLink('/contact')}
+                  > Contact </Link>
                 </section>
               </> )
       }
