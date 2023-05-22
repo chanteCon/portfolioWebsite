@@ -63,7 +63,7 @@
       "name": "Invoice Receive",
       "roles": ["Designer", "Lead Developer"],
       "technologies": ["GitHub", "Jira", "Confluence", "Swagger"],
-      "filters": ["Web, Source code", "JavaScript", "Python", "All"],
+      "filters": ["Web", "JavaScript", "Python", "All"],
       "gitRepo": null,
       "descriptions": {
           "homepage": "",

@@ -23,7 +23,7 @@ export default function Projects() {
 
 
   return (
-    <div className = "w-full flex flex-col align-center justify-center pt-[80px] pb-20">
+    <div className = "w-full flex flex-col align-center justify-center pt-[80px]">
         <RecentProjTitle activeFilter = {activeFilter}/>
         {/* Project cards container */}
         <section className = "self-center pt-[60px] lg:w-[95%] xl:w-[65%]" >
