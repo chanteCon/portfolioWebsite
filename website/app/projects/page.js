@@ -8,6 +8,8 @@ import { SmallTick } from "../components/smallTick"
 import { RecentProjTitle } from "../components/RecentProjTitle"
 import { BlurImage } from "../components/BlurImage"
 import Link from "next/link"
+import { smallLightBtn } from "../TailwindStyles"
+import { LinksBtns } from "../components/LinkBtns"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "JavaScript", "Python", "Solidity"]
@@ -26,7 +28,7 @@ export default function Projects() {
     <div className = "w-full flex flex-col align-center justify-center pt-[80px]">
         <RecentProjTitle activeFilter = {activeFilter}/>
         {/* Project cards container */}
-        <section className = "self-center pt-[60px] lg:w-[95%] xl:w-[65%]" >
+        <section className = "self-center pt-[60px] lg:w-[95%] xl:w-[62%]" >
             <div className = "flex flex-wrap text-center gap-[20px] justify-center" >
               {
                 displayProjects.map(project =>
@@ -42,25 +44,9 @@ export default function Projects() {
                       className= "md:p-[30px] pt-[15px]" > {project.descriptions.projectsPage}
                     </p>
                     <div className = "flex flex-row flex-wrap justify-center md:gap-7 gap-3 pt-[15px] md:pt-0">
-                    {
-                        project.links.map(link =>
-                        link.type !== "video" &&
-                        <a
-                          style = {{ lineHeight: '0.9' }}
-                          href = {link.link}
-                          target = "_blank"
-                          rel="noreferrer noopener"
-                          className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black flex px-[10px]"
-                        >
-                        <p className = "self-center" >{link.name}</p>
-                        <img
-                          className = "w-[15px] h-[15px] self-center"
-                          src = '/images/icons/externalLinkBlack.png'
-                        />
-                      </a>)
-                    }
+                     <LinksBtns project = {project} />
                       <Link
-                            className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-black"
+                            className = {smallLightBtn}
                             style = {{ lineHeight: '30px' }}
                             href = {`/projects/${project.name}`}
               

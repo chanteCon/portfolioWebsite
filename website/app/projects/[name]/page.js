@@ -3,6 +3,8 @@ import data from "data/projects.json"
 import { BlurImage } from '@/app/components/BlurImage';
 import { SmallTick } from '@/app/components/SmallTick';
 import { VideoEmbeds } from '@/app/VideoEmbeds';
+import { smallLightBtnWithImage } from '@/app/TailwindStyles';
+import { LinksBtns } from '@/app/components/LinkBtns';
 
 export default function ProjectPage ({ params })  {
   const name = params.name.replace("%20"," ")
@@ -26,10 +28,13 @@ export default function ProjectPage ({ params })  {
             >
           </BlurImage>
           <p
-            className = "relative bottom-[140px] text-3xl"
+            className = "relative bottom-[140px] text-3xl"  
           >
             {project.name.toUpperCase()}
           </p>
+          <div className = "relative bottom-[100px] left-[40%] sm:left-[80%]">
+            <LinksBtns project = { project } />
+          </div>
       </div>
       <section className = "flex flex-wrap justify-center xl:gap-[10px] gap-[20px]">
       <div>
