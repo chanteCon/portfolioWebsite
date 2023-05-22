@@ -33,7 +33,7 @@
     },
     {
       "name": "Fruit Supply",
-      "roles": ["Designer", "Lead Backend Developer"],
+      "roles": ["Designer", "Developer"],
       "technologies": ["GitHub", "Remix IDE", "Ropsten", "MetaMask"],
       "filters": ["Blockchain", "Source code", "Solidity", "JavaScript", "All"],
       "gitRepo": "https://github.com/schummd/supply-chain",
@@ -61,7 +61,7 @@
     },
     {
       "name": "Invoice Receive",
-      "roles": ["Designer", "Lead Developer"],
+      "roles": ["Designer", "Lead Backend Developer"],
       "technologies": ["GitHub", "Jira", "Confluence", "Swagger", "AWS"],
       "filters": ["Web", "JavaScript", "Python", "All"],
       "gitRepo": null,

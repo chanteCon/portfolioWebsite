@@ -49,15 +49,15 @@ export default function ProjectPage ({ params })  {
         </div>
       </div>
       <div>
-      <p > 
-      {
-        project.roles.length > 1 ? 'Roles' : 'Role'
-      }
-      </p>
+        <p > 
+        {
+          project.roles.length > 1 ? 'Roles' : 'Role'
+        }
+        </p>
         <div className = { boxCardStyle } >
           {project.roles.map(role =>
           <div className = "flex justify-between text-left p-[0px]">
-            <li>{role}</li>
+            <p>{role}</p>
           </div>
           )}
         </div>
