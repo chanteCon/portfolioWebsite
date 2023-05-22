@@ -7,13 +7,20 @@ import React from "react"
 import { SmallTick } from "./components/SmallTick"
 import Link from "next/link"
 import { MainProjectSkill } from "./components/MainProjectSkill"
+import { ContactLinks } from "./components/ContactLinks"
 
 export default function Home() {
   const projects = data.projects
   const [hideImgCard, setHideImgCard] = React.useState("")
+
+  const copyUserName = () => {
+    navigator.clipboard.writeText("ChanteCon#4811")
+    alert("username copied")
+  }
+
   return (
     <>
-      <div className = "flex flex-col flex-1 items-center h-100 w-[60%] text-center pt-[200px] text-neutral-300 gap-[20px]" >
+      <div className = "flex flex-col flex-1 items-center h-100 w-[60%] text-center pt-[200px] text-neutral-300 gap-[50px]" >
         <section className = "xl:w-[50%]">
           <div className = "font-light">
             <h1 style = {{ fontSize: '28pt' }} >Hi, I'm Chantelle. I'm a</h1>
@@ -29,8 +36,8 @@ export default function Home() {
           I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.
           </p>
         </section>
-        <section>
-
+        <section className = "flex gap-[30px] mt-[-30px]">
+          <ContactLinks onClick = {copyUserName}/>
         </section>
         <section className = "w-full">
           <h1 className = "text-2xl"> Projects </h1> 
