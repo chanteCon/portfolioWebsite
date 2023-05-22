@@ -65,7 +65,7 @@ export const Nav = () => {
                   href="/about">About Me</a>
                 <a
                   className="hover:text-[#F6A693]"
-                  href="#">Contact</a>
+                  href="/contact">Contact</a>
               </div>
               }
                         </div>
@@ -100,9 +100,11 @@ export const Nav = () => {
                   <Link 
                     href = '/about'
                     className = {isActiveLink('/about')}
-                  >
-                    About Me</Link>
-                  <div>Contact</div>
+                  > About </Link>
+                  <Link 
+                    href = '/contact'
+                    className = {isActiveLink('/contact')}
+                  > Contact </Link>
                 </section>
               </> )
       }
