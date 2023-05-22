@@ -10,6 +10,7 @@ import { BlurImage } from "../components/BlurImage"
 import Link from "next/link"
 import { smallLightBtn } from "../TailwindStyles"
 import { LinksBtns } from "../components/LinkBtns"
+import { MainProjectSkill } from "../components/MainProjectSkill"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "JavaScript", "Python", "Solidity"]
@@ -53,16 +54,7 @@ export default function Projects() {
                       > MORE +
                       </Link>
                   </div>
-                     <div
-                      className = "absolute top-[7px] right-[7px] w-[100px] h-[25px] bg-[#373737] rounded-3xl flex justify-between px-4"
-                    >
-                      <p
-                        className = "text-white text-xs self-center"
-                      >
-                        {project.skills[0].toUpperCase()}
-                      </p>
-                      <SmallTick />
-                    </div>
+                     <MainProjectSkill project = { project }/>
                   </div>
                   :
                   <div
