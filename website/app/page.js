@@ -37,7 +37,7 @@ export default function Home() {
           </p>
         </section>
         <section className = "flex gap-[30px] mt-[-30px]">
-          <ContactLinks onClick = {copyUserName}/>
+          <ContactLinks onClick = {() => copyUserName()}/>
         </section>
         <section className = "w-full">
           <h1 className = "text-2xl"> Projects </h1> 
