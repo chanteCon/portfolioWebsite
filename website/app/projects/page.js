@@ -21,27 +21,17 @@ export default function Projects() {
     localStorage.getItem === null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
   }, [showFilters]);
 
-  const alignProjects = () => {
-    const style = "pt-20 flex flex-wrap text-3xl text-center gap-7 pb-[30px] justify-center"
-    return (displayProjects.length % 2 === 0 || displayProjects.length === 1)
-    ? style
-    : style.concat(" ", "lg:justify-start")
-  }
-
   return (
-    <div className = "w-full flex justify-center pb-20">
-      <div className = 'pt-20 h-screen lg:w-[70%] 2xl:w-[55%] flex flex-col xl:ml-[9%] '>
+    <div className = "w-full flex flex-col align-center justify-center pt-[80px] pb-20">
         <RecentProjTitle activeFilter = {activeFilter}/>
         {/* Project cards container */}
-        <section
-          className = {alignProjects()}
-        >
+        <section className = "self-center pt-[100px] lg:w-[95%] xl:w-[65%] flex flex-wrap justify-center text-center gap-[20px]">
             { 
               displayProjects.map(project =>
                 hideImgCard === project.name 
                 ? 
                 <div 
-                  className = "h-[250px] w-[260px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8] relative pt-[40px]"
+                  className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8] relative pt-[40px]"
                   key = {project.name}
                   onMouseLeave = { () => {setHideImgCard('')} }
                 >
@@ -49,7 +39,7 @@ export default function Projects() {
                   <p
                     className= "p-[15px]" > {project.descriptions.projectsPage}
                   </p>
-                  <div className = "flex justify-center gap-3">
+                  <div className = "flex flex-row flex-wrap justify-center gap-3">
                   {
                       project.links.map(link =>
                       link.type !== "video" && 
@@ -88,19 +78,19 @@ export default function Projects() {
                 </div>
                 : 
                 <div 
-                  className = "h-[250px] w-[260px] overflow-hidden relative"
+                  className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] overflow-hidden relative"
                   key = {project.name}
                   onMouseOver = { () => {setHideImgCard(project.name)} }
                 >
                   <BlurImage
-                    className = "h-[250px] w-[260px] xl:h-[300px] xl:w-[310px] bg-cover bg-center"
+                    className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] bg-cover bg-center"
                     style = {{
                       backgroundImage: `url(${project.images.mainImage})`,
                     }}
                     >
                   </BlurImage>
                   <p
-                    className = "relative bottom-[140px] xl:bottom-[190px]"
+                    className = "relative bottom-[140px] md:bottom-[190px]"
                   >
                     {project.name.toUpperCase()}
                   </p>
@@ -118,7 +108,6 @@ export default function Projects() {
               )
             }
         </section>
-      </div >
 
       {/* Buttons for filter and filter list */}
       <div className = "absolute lg:right-[30%] top-[110px] right-[8%] self-center">
