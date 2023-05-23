@@ -1,8 +1,10 @@
+
 export const FiltersList = ({ filters, onClose }) => {
 
   const filterClicked = (filter) => {
-    localStorage.setItem('projects filter', filter)
+    // localStorage.setItem('projects filter', filter)
     onClose()
+    location.href = `/projects/?filter=${filter}`
   }
 
   return (

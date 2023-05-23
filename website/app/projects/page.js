@@ -13,16 +13,16 @@ import { LinksBtns } from "../components/LinkBtns"
 import { MainProjectSkill } from "../components/MainProjectSkill"
 import { PopUpBackDrop } from "../components/PopUpBackDrop"
 
-export default function Projects() {
+export default function Projects({ params, searchParams }) {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "JavaScript", "Python", "Solidity"]
   const [showFilters, setShowFilters] = React.useState(false)
-  const [activeFilter, setActiveFilter] = React.useState('All')
+  const [activeFilter, setActiveFilter] = React.useState(searchParams.filter ? searchParams.filter : 'All')
   const [hideImgCard, setHideImgCard] = React.useState('')
   const projects = data.projects
   const displayProjects = projects.filter(project => project.filters.includes(activeFilter))
-
+  
   React.useEffect(() => {
-    localStorage.getItem === null ? localStorage.setItem('projects filter', 'All') : setActiveFilter(window.localStorage.getItem('projects filter'))
+    searchParams.filter ? setActiveFilter(searchParams.filter) : setActiveFilter('All')
   }, [showFilters]);
 
 
