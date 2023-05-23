@@ -39,7 +39,7 @@ export default function Contact() {
             className = "placeholder-[#F2EAE8] bg-[#262626] border-[1px] border-[#F6A693] w-full rounded-lg p-[25px] h-[150px] md:h-[200px] resize-none"
             placeholder= "Your message"
           />
-          <button className = "lg:mt-[10px] w-[140px] h-[30px] bg-[#F6A693] rounded-xl hover:opacity-70" >Send Message</button>
+          <button className = "lg:mt-[10px] w-[140px] h-[30px] bg-[#F6A693] rounded-xl hover:opacity-70">Send Message</button>
           </form>
         </div>
         <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#262626] text-left p-[30px] md:p-[100px] flex flex-col gap-[50px]">
@@ -56,7 +56,7 @@ export default function Contact() {
             <ContactLinks onClick = {() => copyUserName()}/>
           </div>
           <a 
-            className = "flex gap-[15px] hover:opacity-70" 
+            className = "flex gap-[15px] hover:opacity-70 w-[200px]" 
             href="mailto:chantelle.cs@outlook.com"
           >
             <img
@@ -66,7 +66,7 @@ export default function Contact() {
             />
             <p>chantelle.cs@outlook.com</p>
             </a>
-          <a className = "flex gap-[15px] hover:opacity-70"
+          <a className = "flex gap-[15px] hover:opacity-70 w-[100px]"
               href = "tel:+61413122769"
           >
             <img
