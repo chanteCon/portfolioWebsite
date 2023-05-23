@@ -18,14 +18,32 @@ export default function Contact() {
         <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#373737]">
         </div>
         <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#262626] text-left p-[30px] md:p-[100px] flex flex-col gap-[50px]">
-          <p>Chantelle Conlon Scoullar</p>
-          <div className = "flex gap-[20px]">
+          <div className = "self-start flex flex-col items-center">
+            <p>Chantelle Conlon Scoullar</p>
+            <img 
+              className = "ml-[-10px] pt-[5px]"
+              src = "/images/pinkLine.svg"
+              width = "150px"
+              height = "4px"
+            />
+          </div>
+          <div className = "flex gap-[30px] mt-[-30px] ml-[10px]">
             <ContactLinks onClick = {() => copyUserName()}/>
           </div>
-          <div>
+          <div className = "flex gap-[15px]" >
+            <img
+              src = "/images/icons/mail.png"
+              width = "25px"
+              height = "20px"
+            />
             <p>chantelle.cs@outlook.com</p>
           </div>
-          <div>
+          <div className = "flex gap-[15px]">
+            <img
+              src = "/images/icons/phoneIcon.png"
+              width = "25px"
+              height = "20px"
+            />
             <p>0413122769</p>
           </div>
         </div>
