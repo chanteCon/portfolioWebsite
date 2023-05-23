@@ -4,6 +4,7 @@ export const HomePageLinks = ({link, img}) => {
     href = {link}
     target = "_blank"
     rel="noreferrer noopener"
+    className = "hover:opacity-80"
   >
     <img 
       src = {img}
@@ -12,4 +13,4 @@ export const HomePageLinks = ({link, img}) => {
     />
   </a>
   )
-}
+} 
