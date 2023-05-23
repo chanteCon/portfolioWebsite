@@ -41,14 +41,16 @@ export default function Contact() {
             />
             <p>chantelle.cs@outlook.com</p>
             </a>
-          <div className = "flex gap-[15px]">
+          <a className = "flex gap-[15px]"
+              href = "tel:+61413122769"
+          >
             <img
               src = "/images/icons/phoneIcon.png"
               width = "25px"
               height = "20px"
             />
             <p>0413122769</p>
-          </div>
+          </a>
         </div>
         <div>
 
