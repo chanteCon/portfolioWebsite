@@ -5,6 +5,7 @@ import { SmallTick } from '@/app/components/SmallTick';
 import { VideoEmbeds } from '@/app/VideoEmbeds';
 import { smallLightBtnWithImage } from '@/app/TailwindStyles';
 import { LinksBtns } from '@/app/components/LinkBtns';
+import { ContactForm } from '@/app/components/ContactForm';
 
 export default function ProjectPage ({ params })  {
   const name = params.name.replace("%20"," ")
@@ -16,7 +17,7 @@ export default function ProjectPage ({ params })  {
 
   return (
     <div className = "flex flex-col w-[80%] xl:w-[50%] 2xl:w-[40%] pt-[10vh] justify-center text-center gap-[50px] text-[#F2EAE8]">
-      < div 
+      < section 
           className = "w-full h-[230px] overflow-hidden relative rounded-2xl text-black"
           key = {project.name}
         >
@@ -35,7 +36,7 @@ export default function ProjectPage ({ params })  {
           <div className = "relative bottom-[100px] left-[40%] sm:left-[80%]">
             <LinksBtns project = { project } />
           </div>
-      </div>
+      </section>
       <section className = "flex flex-wrap justify-center xl:gap-[10px] gap-[20px]">
       <div>
         <p >Skills</p>
@@ -75,7 +76,7 @@ export default function ProjectPage ({ params })  {
     </section>
     {
         video && 
-        <div className = "align-center relative h-0 pb-[56.25%] mb-[40px]">
+        <section className = "align-center relative h-0 pb-[56.25%] mb-[40px]">
           <p>{video.name}</p>
           <iframe 
             className = "absolute left-0 top-[40px]"
@@ -83,7 +84,7 @@ export default function ProjectPage ({ params })  {
             width = "100%"
             height = "100%"
           />
-        </div>
+        </section>
       }
     <h1 className = "text-[#F2EAE8] text-lg" > {`What is ${project.name}?`} </h1>
     <div className = "w-full flex justify-center bg-[#262626] p-[40px] rounded mt-[-35px] text-left" >
@@ -92,6 +93,11 @@ export default function ProjectPage ({ params })  {
     <h1 className = "text-[#F2EAE8] text-lg" > What did I do? </h1>
     <div className = "w-full flex justify-center bg-[#262626] p-[40px] rounded mt-[-35px] text-left" >
       {project.contributions}
+    </div>
+    <div>
+    <section className = "">
+      <ContactForm title = {`Ask me about ${project.name}`}/>
+    </section>
     </div>
   </div>
   );
