@@ -30,14 +30,17 @@ export default function Contact() {
           <div className = "flex gap-[30px] mt-[-30px] ml-[10px]">
             <ContactLinks onClick = {() => copyUserName()}/>
           </div>
-          <div className = "flex gap-[15px]" >
+          <a 
+            className = "flex gap-[15px]" 
+            href="mailto:chantelle.cs@outlook.com"
+          >
             <img
               src = "/images/icons/mail.png"
               width = "25px"
               height = "20px"
             />
             <p>chantelle.cs@outlook.com</p>
-          </div>
+            </a>
           <div className = "flex gap-[15px]">
             <img
               src = "/images/icons/phoneIcon.png"
