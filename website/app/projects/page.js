@@ -11,6 +11,7 @@ import Link from "next/link"
 import { smallLightBtn } from "../TailwindStyles"
 import { LinksBtns } from "../components/LinkBtns"
 import { MainProjectSkill } from "../components/MainProjectSkill"
+import { PopUpBackDrop } from "../components/PopUpBackDrop"
 
 export default function Projects() {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "JavaScript", "Python", "Solidity"]
@@ -95,10 +96,7 @@ export default function Projects() {
             {
               showFilters
                 ? <>
-                  <div
-                    className = "w-screen h-screen fixed top-0 left-0 fixed z-500"
-                    onClick = { () => setShowFilters(false) }
-                  ></div>
+                  <PopUpBackDrop onClick = {() => setShowFilters(false)}/>
                   <div className = "absolute z-600 lg:right-[30%] right-[8%] ">
                   <FiltersList
                     filters = { filters }
