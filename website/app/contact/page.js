@@ -16,7 +16,9 @@ export default function Contact() {
         <p className = "text-lg" >I would love to hear from you</p>
       </section>
       <section className = "justify-center w-full flex flex-wrap-reverse">
-        <ContactForm title = {"Say hello!"}/>
+        <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#373737] flex flex-col pt-[20px] lg:pt-[70px] md:pt-[50px] items-center">
+          <ContactForm />
+        </div>
         <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#262626] text-left p-[30px] md:p-[100px] flex flex-col gap-[50px]">
           <div className = "self-start flex flex-col items-center">
             <p className = "lg:text-lg" >Chantelle Conlon Scoullar</p>

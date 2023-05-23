@@ -1,3 +1,5 @@
+"use client"
+
 import emailjs from '@emailjs/browser';
 import React from 'react';
 
@@ -21,9 +23,11 @@ export const ContactForm = ({ title }) => {
   };
 
   return (
-    <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#373737] flex flex-col pt-[20px] lg:pt-[70px] md:pt-[50px] items-center">
-      <p className = "pb-[10px] md:pb-[20px] lg:mr-[290px] text-lg" >{title}</p>
-      <form ref={form} className = "md:w-[70%] flex flex-col gap-[10px]" >
+    <div className = "w-full flex flex-col items-center">
+      <p className = "pb-[10px] md:pb-[20px] text-lg" >{
+      title ? title : "Say hello!"
+      }</p>
+      <form ref={form} className = "w-[70%] flex flex-col gap-[10px]" >
         <input 
           type="text"
           name="user_name"
