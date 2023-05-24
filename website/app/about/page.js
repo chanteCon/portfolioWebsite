@@ -43,8 +43,8 @@ export default function About() {
     )
   }
  return (
-  <div className = 'pt-[100px] text-[#F2EAE8] flex flex-wrap justify-center gap-y-[40px]'>
-    <section className = "3xl:fixed left-[100px] top-[150px] flex flex-col items-center justify-center w-[800px] gap-[40px]">
+  <div className = 'relative pt-[100px] text-[#F2EAE8] flex 3xl:flex-row flex-col justify-center gap-y-[40px]'>
+    <section className = "3xl:fixed left-[150px] top-[150px] flex flex-col items-center justify-center sm:w-[640px] gap-[40px]">
       <h1 className = "text-2xl font-extralight">Who am I?</h1>
       <img
         src = "/images/aboutImg.png"
@@ -74,12 +74,12 @@ export default function About() {
       </a>
     </section>
     <div className = "3xl:relative flex flex-col left-[350px] gap-y-[100px]">
-      <section className = "w-[800px] flex flex-col justify-center items-center" >
-        <p className = "text-lg" >Skills</p>
+      <section className = "sm:w-[640px] flex flex-col justify-center items-center" >
+        <p className = "text-lg hidden sm:block" >Skills</p>
         <div className = "mt-[10px] flex flex-row flex-wrap gap-[15px] justify-center ">
           <div className ="flex flex-col items-center gap-[10px]">
             <p>Web Dev</p>
-            <div className = "w-[280px] h-[280px] bg-[#262626] p-[5%] text-sm flex flex-col items-center justify-center">
+            <div className = "w-[280px] h-[280px] bg-[#262626] p-[5%] text-xs sm:text-sm flex flex-col items-center justify-center">
               <p className = "pb-[-30px]">
                 <p> I have experience building end-to-end web applications.<p/><br/>
                 <p>On the frontend I have worked with <p className = "text-[#F6A693] inline">Create React App, Next js and vanilla JavaScript.</p></p><br/>
@@ -107,7 +107,7 @@ export default function About() {
           </div>
           <div className ="flex flex-col items-center gap-[10px]">
             <p >Languages</p>
-            <div className = "w-[268px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
+            <div className = "w-[280px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
               {
                 languages.map(language =>
                 <div className = "flex justify-center items-center gap-[10px]" >
@@ -134,7 +134,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className = "w-[800px] flex flex-col justify-center items-center ">
+      <section className = "sm:w-[640px] flex flex-col justify-center items-center ">
         <p className = "text-lg" >Education</p>
         <div>
         <img
@@ -145,16 +145,16 @@ export default function About() {
           height ="200px"
         />
         </div>
-        <div className = "relative top-[-310px] right-[145px]">
+        <div className = "relative top-[-310px] sm:right-[145px] right-[90px]">
           <EducationInfo education = { education[0] } />
         </div>
-        <div className = "relative top-[-280px] left-[145px]">
+        <div className = "relative sm:top-[-280px] top-[-360px] sm:left-[145px] left-[90px]">
           <EducationInfo education = { education[1] } />
         </div>
-        <div className = "relative top-[-260px] right-[145px]">
+        <div className = "relative sm:top-[-260px] top-[-400px] sm:right-[145px] right-[90px]">
           <EducationInfo education = { education[2] } />
         </div>
-        <div className = "w-[80%] mt-[-200px]">
+        <div className = "w-full sm:w-[80%] sm:mt-[-200px] mt-[-320px]">
           <ContactForm />
         </div>
       </section>
