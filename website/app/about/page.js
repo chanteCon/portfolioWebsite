@@ -43,8 +43,8 @@ export default function About() {
     )
   }
  return (
-  <div className = 'relative pt-[100px] text-[#F2EAE8] flex 3xl:flex-row flex-col justify-center gap-y-[40px]'>
-    <section className = "3xl:fixed left-[150px] top-[150px] flex flex-col items-center justify-center sm:w-[640px] gap-[40px]">
+  <div className = 'relative pt-[100px] text-[#F2EAE8] flex mxl:flex-row flex-col justify-center gap-[40px] '>
+    <section className = "mxl:fixed 2xl:left-[150px] left-[80px] flex flex-col items-center justify-center sm:w-[640px] md:w-[700px] gap-[40px] overflow-auto top-0 right-0 bottom-0 sm:pt-[50px]">
       <h1 className = "text-2xl font-extralight">Who am I?</h1>
       <img
         src = "/images/aboutImg.png"
@@ -73,8 +73,8 @@ export default function About() {
         <p> resume </p>
       </a>
     </section>
-    <div className = "3xl:relative flex flex-col left-[350px] gap-y-[100px]">
-      <section className = "sm:w-[640px] flex flex-col justify-center items-center" >
+    <div className = "mxl:relative flex flex-col mxl:mr-[100px] 2xl:mr-0 left-[350px] gap-y-[100px]">
+      <section className = "sm:w-[640px] md:w-[700px] flex flex-col justify-center items-center" >
         <p className = "text-lg hidden sm:block" >Skills</p>
         <div className = "mt-[10px] flex flex-row flex-wrap gap-[15px] justify-center ">
           <div className ="flex flex-col items-center gap-[10px]">

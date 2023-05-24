@@ -30,20 +30,32 @@ export const Nav = () => {
   // if screen size small then collapse navbar
   return (
     <div 
-      className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0"
-      style = {{ backgroundColor: '#191919' }}
+      className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0 bg-[#191919]"
       > 
       { smallScreen
           ? (
-            <div className = "w-full flex justify-end">
+            <div className = "w-full flex justify-end pb-[10px]">
+              <Link
+                href = "/"
+                className = "hover:opacity-70"
+              >
+                <Image
+                    src ={"/images/logo.svg"}
+                    alt="Picture of laptop" 
+                    className = "fixed left-[20px] top-[7px]"
+                    width = {35}
+                    height = {35} >
+                </Image>
+              </Link>
               <div
-                className = {showNavItems && `text-right`}
+                className = "text-right"
               >
               <button
                 className="hover:text-[#F6A693]"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? 'x' : 
                   <Image 
+                    className = "hover:opacity-70"
                     src = {"/images/icons/hamburgerIcon.png"}
                     width = {17}
                     height = {17}
@@ -72,18 +84,19 @@ export const Nav = () => {
             </div>
           )
           : ( <>
-              <section 
-                className = "flex space-x-3 items-center"
+              <Link 
+                href = "/"
+                className = "flex space-x-3 items-center hover:opacity-70"
                 >
                 <Image
-                  src ={"/images/me.jpeg"}
+                  src ={"/images/logo.svg"}
                   alt="Picture of laptop" 
                   className = "rounded-full mb-2"
                   width = {35}
                   height = {35} >
                 </Image>
-                <p>Chantelle Conlon Scoullar</p>
-              </section>
+                <p className = "mt-[-8px]">Chantelle Conlon Scoullar</p>
+              </Link>
               <section
                 className= "flex justify-end space-x-5 pt-2"
                 style = {{backgroundColor: '#1A1A1A'}}>
