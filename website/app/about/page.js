@@ -1,4 +1,6 @@
+import { ContactForm } from "../components/ContactForm";
 import { ContactLinks } from "../components/ContactLinks";
+import { EducationInfo } from "../components/EducationInfo";
 import { ProjectsByCategory } from "../components/ProjectsByCategory";
 import { SmallTick } from "../components/SmallTick";
 
@@ -22,6 +24,12 @@ export default function About() {
     "UE4 blueprints"
   ]
 
+  const education = [
+    {year: 2015, details: "HSC \n ATAR: 88.25"},
+    {year: 2020, details: "Commenced UNSW bachelor of Computer Science"},
+    {year: 2023, details: "Completed UNSW bachelor of Computer Science with distinction"}
+  ]
+
   const addSkill = (skill) => {
     return (
     <div className = "flex flex-row gap-[7px]">
@@ -35,8 +43,8 @@ export default function About() {
     )
   }
  return (
-  <div className = 'p-[5%] pt-[100px] text-[#F2EAE8] flex'>
-    <section className = "flex flex-col items-center justify-center w-[50%] gap-[40px]">
+  <div className = 'pt-[100px] text-[#F2EAE8] flex flex-wrap justify-center gap-y-[40px]'>
+    <section className = "3xl:fixed left-[100px] top-[150px] flex flex-col items-center justify-center w-[800px] gap-[40px]">
       <h1 className = "text-2xl font-extralight">Who am I?</h1>
       <img
         src = "/images/aboutImg.png"
@@ -65,64 +73,92 @@ export default function About() {
         <p> resume </p>
       </a>
     </section>
-    <section className = "w-[50%] flex flex-col justify-center items-center" >
-    <p className = "text-lg" >Skills</p>
-    <div className = "mt-[30px] flex flex-row flex-wrap gap-[20px] justify-center ">
-      <div className ="flex flex-col items-center gap-[10px]">
-        <p>Web Dev</p>
-        <div className = "w-[350px] h-[300px] bg-[#262626] p-[10%] text-sm flex flex-col items-center">
-          <p> I have experience building end-to-end web applications.<p/><br/>
-          <p>On the frontend I have worked with <p className = "text-[#F6A693] inline">Create React App, Next js and vanilla JavaScript.</p></p><br/>
-          <p>Server side I have worked with <p className = "text-[#F6A693] inline">python flask</p> to create systems with authentication and authorisation.</p><br/>
-          </p>
-          <ProjectsByCategory filter = { "Web"} />
+    <div className = "3xl:relative flex flex-col left-[350px] gap-y-[100px]">
+      <section className = "w-[800px] flex flex-col justify-center items-center" >
+        <p className = "text-lg" >Skills</p>
+        <div className = "mt-[10px] flex flex-row flex-wrap gap-[15px] justify-center ">
+          <div className ="flex flex-col items-center gap-[10px]">
+            <p>Web Dev</p>
+            <div className = "w-[280px] h-[280px] bg-[#262626] p-[5%] text-sm flex flex-col items-center justify-center">
+              <p className = "pb-[-30px]">
+                <p> I have experience building end-to-end web applications.<p/><br/>
+                <p>On the frontend I have worked with <p className = "text-[#F6A693] inline">Create React App, Next js and vanilla JavaScript.</p></p><br/>
+                <p>Server side I have worked with <p className = "text-[#F6A693] inline">python flask</p> to create systems with authentication and authorisation.</p><br/>
+                </p>
+              </p>
+              <ProjectsByCategory filter = { "Web"} />
+            </div>
+          </div>
+          <div className ="flex flex-col items-center gap-[10px] ">
+            <p>Game Dev</p>
+            <div className = "w-[280px] h-[280px] bg-[#262626] p-[5%] text-sm flex flex-col items-center justify-center">
+              <p className = "pb-[38px]" ><p>I worked on the game NIGHTCARE in <p className = "text-[#F6A693] inline">Unreal Engine 4.</p> For this project I used blueprints. NIGHTCARE has been released and is available for download
+                <a
+                href = "https://rinade.itch.io/nightcare"
+                target = "_blank"
+                rel="noreferrer noopener"
+                className = "underline hover:opacity-70"
+                > here </a>.
+              </p><br/>
+              <p>Additionally, I have experience with <p className = "text-[#F6A693] inline">object oriented</p> game design.</p><br/>
+              </p>
+              <ProjectsByCategory filter = { "Games"} />
+            </div>
+          </div>
+          <div className ="flex flex-col items-center gap-[10px]">
+            <p >Languages</p>
+            <div className = "w-[268px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
+              {
+                languages.map(language =>
+                <div className = "flex justify-center items-center gap-[10px]" >
+                  <p className = "w-[100px]">{language.language}</p>
+                  <div >
+                    {addSkill(language.skill)}
+                  </div>
+                </div>)
+              }
+            </div>
+          </div>
+          <div className ="flex flex-col items-center gap-[10px]">
+            <p>Tools</p>
+            <div className = "w-[280px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
+              {
+                tools.map(tool =>
+                  <div className = "w-full flex justify-between">
+                  <div className = "w-[130px]" >{tool}</div>
+                  <SmallTick />
+                  </div>
+                )
+              }
+            </div>
+          </div>
         </div>
-      </div>
-      <div className ="flex flex-col items-center gap-[10px] ">
-        <p>Game Dev</p>
-        <div className = "w-[350px] h-[300px] bg-[#262626] p-[10%] text-sm flex flex-col items-center">
-          <p className = "pb-[41px]" ><p>I worked on the game NIGHTCARE in <p className = "text-[#F6A693] inline">Unreal Engine 4.</p> For this project I used blueprints. NIGHTCARE has been released and is available for download 
-            <a 
-            href = "https://rinade.itch.io/nightcare"
-            target = "_blank"
-            rel="noreferrer noopener"
-            className = "underline hover:opacity-70"
-            > here </a>.
-          </p><br/> 
-          <p>Additionally, I have experience with <p className = "text-[#F6A693] inline">object oriented</p> game design.</p><br/>
-          </p>
-          <ProjectsByCategory filter = { "Games"} />
+      </section>
+      <section className = "w-[800px] flex flex-col justify-center items-center ">
+        <p className = "text-lg" >Education</p>
+        <div>
+        <img
+          className = "pt-[60px]"
+          src = "images/timeline.svg"
+          alt= "A timeline of education"
+          width = "100px"
+          height ="200px"
+        />
         </div>
-      </div>
-      <div className ="flex flex-col items-center gap-[10px]">
-        <p >Languages</p>
-        <div className = "w-[350px] h-[300px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
-          {
-            languages.map(language => 
-            <div className = "flex justify-center items-center gap-[10px]" >
-              <p className = "w-[100px]">{language.language}</p>
-              <div >
-                {addSkill(language.skill)}
-              </div>
-            </div>)
-          }
+        <div className = "relative top-[-310px] right-[145px]">
+          <EducationInfo education = { education[0] } />
         </div>
-      </div>
-      <div className ="flex flex-col items-center gap-[10px]">
-        <p>Tools</p>
-        <div className = "w-[350px] h-[300px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
-          {
-            tools.map(tool => 
-              <div className = "w-full flex justify-between">
-              <div className = "w-[130px]" >{tool}</div>
-              <SmallTick />
-              </div>
-            )
-          }
+        <div className = "relative top-[-280px] left-[145px]">
+          <EducationInfo education = { education[1] } />
         </div>
-      </div>
+        <div className = "relative top-[-260px] right-[145px]">
+          <EducationInfo education = { education[2] } />
+        </div>
+        <div className = "w-[80%] mt-[-200px]">
+          <ContactForm />
+        </div>
+      </section>
     </div>
-    </section>
   </div>
  )
 }
