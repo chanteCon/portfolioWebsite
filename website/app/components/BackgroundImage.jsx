@@ -10,7 +10,7 @@ export const BackgroundImage = styled('div')({
   zIndex: '-1',
   backgroundImage: 'url(/images/background.jpg)',
   backgroundSize: 'cover',
-  backgroundColor: 'rgba(25, 25, 25, 0.8)',
+  backgroundColor: 'rgba(25, 25, 25, 0.85)',
   backgroundBlendMode: 'darken',
   backgroundRepeat: 'repeat'
 })
