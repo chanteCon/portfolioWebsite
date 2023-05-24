@@ -1,6 +1,5 @@
 "use client"
 
-import { smallLightBtn } from "./TailwindStyles"
 import data from "data/projects.json"
 import { BlurImage } from "./components/BlurImage"
 import React from "react"
@@ -9,6 +8,7 @@ import Link from "next/link"
 import { MainProjectSkill } from "./components/MainProjectSkill"
 import { ContactLinks } from "./components/ContactLinks"
 import { ContactForm } from "./components/ContactForm"
+import { HomePageMoreBtn } from "./components/HomePageMoreBtn"
 
 export default function Home() {
   const projects = data.projects
@@ -21,17 +21,19 @@ export default function Home() {
 
   return (
     <>
-      <div className = "flex flex-col flex-1 items-center h-100 w-[60%] text-center pt-[200px] text-neutral-300 gap-[60px]" >
+      <div className = "flex flex-col flex-1 items-center h-100 w-[90%] sm:w-[60%] text-center pt-[100px] sm:pt-[200px] text-neutral-300 gap-[60px]" >
         <section className = "xl:w-[50%]">
           <div className = "font-light">
             <h1 style = {{ fontSize: '28pt' }} >Hi, I'm Chantelle. I'm a</h1>
+            <div className = "flex justify-center gap-[10px]">
             <h1 
               className = "text-3xl text-[#F6A693]"
               style = {{ fontSize: '28pt' }}
               >
                 developer.
             </h1>
-            <a className = { smallLightBtn } href = "/about"> MORE </a>
+            <HomePageMoreBtn link = { "/about" } text = { "MORE" } />
+            </div>
           </div>
           <p className = "text-neutral-400 text-md pt-8">
           I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.
@@ -41,7 +43,10 @@ export default function Home() {
           <ContactLinks onClick = {() => copyUserName()}/>
         </section>
         <section className = "w-full">
-          <h1 className = "text-2xl"> Projects </h1> 
+          <div className = "flex gap-[10px] justify-center items-center">
+            <h1 className = "text-2xl pt-[10px]"> Projects </h1> 
+            <HomePageMoreBtn link = {"/projects"} text = "MORE" />
+          </div>
           <section className = "self-center pt-[40px] text-black" >
             <div className = "flex flex-wrap text-center gap-[20px] justify-center" >
               {
@@ -54,17 +59,11 @@ export default function Home() {
                 onMouseLeave = { () => {setHideImgCard('')} }
               >
               <p className= " text-md " >{project.name.toUpperCase()}</p>
-                <p
-                  className= "pt-[15px]" > {project.descriptions.homepage}
-                </p>
-                 <MainProjectSkill project = {project} />
-               <Link
-                      className = {smallLightBtn}
-                      style = {{ lineHeight: '30px' }}
-                      href = {`/projects/${project.name}`}
-        
-                > MORE +
-                </Link>
+              <p
+                className= "pt-[15px]" > {project.descriptions.homepage}
+              </p>
+              <MainProjectSkill project = {project} />
+              <HomePageMoreBtn link = {`/projects/${project.name}`} text = { " DETAILS " } />
               </div>
               : idx < 3 &&
               <div
@@ -98,14 +97,8 @@ export default function Home() {
               )}
             </div>
           </section>
-          <a 
-          className = "h-[30px] w-[80px] rounded-2xl bg-[#F2EAE8] text-xs text-[#F6A693] px-[10px] self-center" 
-            href = "/projects"
-          > 
-            {"MORE PROJECTS"}
-          </a>
         </section>
-        <section className = "w-full">
+        <section className = "w-full sm:w-[60%]">
           <ContactForm />
         </section>
       </div>

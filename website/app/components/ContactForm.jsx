@@ -47,7 +47,7 @@ export const ContactForm = ({ title }) => {
         placeholder= "Your message"
       />
       <button 
-        className = "lg:mt-[10px] w-[140px] h-[30px] bg-[#F6A693] rounded-xl hover:opacity-70"
+        className = "lg:mt-[10px] w-[140px] h-[30px] bg-[#F6A693] rounded-xl hover:opacity-70 text-neutral-100"
         onClick = {sendEmail}
       > {
           sent
