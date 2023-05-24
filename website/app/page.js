@@ -35,7 +35,7 @@ export default function Home() {
             <HomePageMoreBtn link = { "/about" } text = { "MORE" } />
             </div>
           </div>
-          <p className = "text-neutral-400 text-md pt-8">
+          <p className = "text-neutral-300 text-md pt-8">
           I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.
           </p>
         </section>

@@ -72,18 +72,19 @@ export const Nav = () => {
             </div>
           )
           : ( <>
-              <section 
+              <Link 
+                href = "/"
                 className = "flex space-x-3 items-center"
                 >
                 <Image
-                  src ={"/images/me.jpeg"}
+                  src ={"/images/logo.svg"}
                   alt="Picture of laptop" 
                   className = "rounded-full mb-2"
                   width = {35}
                   height = {35} >
                 </Image>
-                <p>Chantelle Conlon Scoullar</p>
-              </section>
+                <p className = "mt-[-8px]">Chantelle Conlon Scoullar</p>
+              </Link>
               <section
                 className= "flex justify-end space-x-5 pt-2"
                 style = {{backgroundColor: '#1A1A1A'}}>
