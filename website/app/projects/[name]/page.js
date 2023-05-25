@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import data from "data/projects.json"
-import { BlurImage } from '@/app/components/BlurImage';
-import { SmallTick } from '@/app/components/SmallTick';
-import { VideoEmbeds } from '@/app/VideoEmbeds';
-import { smallLightBtnWithImage } from '@/app/TailwindStyles';
-import { LinksBtns } from '@/app/components/LinkBtns';
-import { ContactForm } from '@/app/components/ContactForm';
+import { BlurImage } from "@/app/components/BlurImage";
+import { SmallTick } from "@/app/components/SmallTick";
+import { VideoEmbeds } from "@/app/VideoEmbeds";
+import { smallLightBtnWithImage } from "@/app/TailwindStyles";
+import { LinksBtns } from "@/app/components/LinkBtns";
+import { ContactForm } from "@/app/components/ContactForm";
 
 export default function ProjectPage ({ params })  {
   const name = params.name.replace("%20"," ")
@@ -42,7 +42,9 @@ export default function ProjectPage ({ params })  {
         <p >Skills</p>
         <div className = { boxCardStyle }>
           {project.skills.map(skill => 
-          <div className = "flex justify-between">
+          <div 
+            key = {skill}
+            className = "flex justify-between">
             <p>{skill}</p>
             <SmallTick />
           </div>
@@ -52,12 +54,14 @@ export default function ProjectPage ({ params })  {
       <div>
         <p > 
         {
-          project.roles.length > 1 ? 'Roles' : 'Role'
+          project.roles.length > 1 ? "Roles" : "Role"
         }
         </p>
         <div className = { boxCardStyle } >
           {project.roles.map(role =>
-          <div className = "flex justify-between text-left p-[0px]">
+          <div 
+            key = { role }
+            className = "flex justify-between text-left p-[0px]">
             <p>{role}</p>
           </div>
           )}
@@ -65,9 +69,13 @@ export default function ProjectPage ({ params })  {
       </div>
       <div>
         <p >Technologies</p>
-        <div className = { boxCardStyle } >
+        <div 
+          key = { crypto.randomUUID() }
+          className = { boxCardStyle } >
           {project.technologies.map(tech =>
-          <div className = "flex justify-between">
+          <div 
+            key = { tech }
+            className = "flex justify-between">
             <p>{tech}</p>
           </div>
           )}

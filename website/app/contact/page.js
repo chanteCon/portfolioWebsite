@@ -27,6 +27,7 @@ export default function Contact() {
               src = "/images/pinkLine.svg"
               width = "150px"
               height = "4px"
+              alt = ""
             />
           </div>
           <div className = "flex gap-[30px] mt-[-30px] ml-[10px]">
@@ -40,6 +41,7 @@ export default function Contact() {
               src = "/images/icons/mail.png"
               width = "25px"
               height = "20px"
+              alt = ""
             />
             <p>chantelle.cs@outlook.com</p>
             </a>
@@ -47,6 +49,7 @@ export default function Contact() {
               href = "tel:+61413122769"
           >
             <img
+              alt = ""
               src = "/images/icons/phoneIcon.png"
               width = "25px"
               height = "20px"

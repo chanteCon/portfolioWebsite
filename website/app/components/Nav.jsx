@@ -20,16 +20,17 @@ export const Nav = () => {
   }, []);
 
   useEffect(() => {
-      window.addEventListener( 'resize', checkScreenSize)
+      window.addEventListener( "resize", checkScreenSize)
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-[#F6A693] font-light'
-    return 'text-neutral-400' 
+    if (link === pathname) return "text-[#F6A693] font-light"
+    return "text-neutral-400" 
   }
   // if screen size small then collapse navbar
   return (
     <div 
+    data-testid = "nav"
       className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0 bg-[#191919]"
       > 
       { smallScreen
@@ -42,9 +43,10 @@ export const Nav = () => {
                 <Image
                     src ={"/images/logo.svg"}
                     alt="Picture of laptop" 
-                    className = "fixed left-[20px] top-[7px]"
                     width = {35}
-                    height = {35} >
+                    height = {35}
+                    className = "fixed left-[20px] top-[7px] h-auto"
+                  >
                 </Image>
               </Link>
               <div
@@ -53,10 +55,11 @@ export const Nav = () => {
               <button
                 className="hover:text-[#F6A693]"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
-                showNavItems ? 'x' : 
+                showNavItems ? "x" : 
                   <Image 
                     className = "hover:opacity-70"
                     src = {"/images/icons/hamburgerIcon.png"}
+                    alt =""
                     width = {17}
                     height = {17}
                   >
@@ -90,7 +93,7 @@ export const Nav = () => {
                 >
                 <Image
                   src ={"/images/logo.svg"}
-                  alt="Picture of laptop" 
+                  alt="CCS logo" 
                   className = "rounded-full mb-2"
                   width = {35}
                   height = {35} >
@@ -99,24 +102,24 @@ export const Nav = () => {
               </Link>
               <section
                 className= "flex justify-end space-x-5 pt-2"
-                style = {{backgroundColor: '#1A1A1A'}}>
+                style = {{backgroundColor: "#1A1A1A"}}>
                   <Link 
-                    href = '/' 
-                    className = {isActiveLink('/')}
+                    href = "/" 
+                    className = {isActiveLink("/")}
                   >
                     Home</Link>
                   <Link 
-                    href = '/projects'
-                    className = {isActiveLink('/projects')}
+                    href = "/projects"
+                    className = {isActiveLink("/projects")}
                   >
                     Recent Projects</Link>
                   <Link 
-                    href = '/about'
-                    className = {isActiveLink('/about')}
+                    href = "/about"
+                    className = {isActiveLink("/about")}
                   > About </Link>
                   <Link 
-                    href = '/contact'
-                    className = {isActiveLink('/contact')}
+                    href = "/contact"
+                    className = {isActiveLink("/contact")}
                   > Contact </Link>
                 </section>
               </> )

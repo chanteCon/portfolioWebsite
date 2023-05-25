@@ -1,7 +1,7 @@
 import { HomePageLinks } from "./HomePageLinks"
 export const ContactLinks = ({onClick}) => {
   return (
-   <>
+   <div data-testid = "contactLinks" className ="flex gap-[30px]">
       <HomePageLinks 
         link = "https://github.com/chanteCon" 
         img = "images/icons/GitIcon.png"
@@ -16,10 +16,11 @@ export const ContactLinks = ({onClick}) => {
       >
         <img 
           src = "images/icons/DiscordIcon.png"
+          alt =""
           height = "20px"
           width = "20px"
         />
       </button>
-    </>
+    </div>
   )
 }
