@@ -6,7 +6,7 @@ afterEach(() => {
   cleanup()
 })
  
-describe('Filter List', () => {
+describe('Home Page Link Buttons', () => {
   it('renders filters list', () => {
     render(<HomePageLinks />)
     const links = screen.getByTestId('homePageLinks')

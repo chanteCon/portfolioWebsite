@@ -7,7 +7,7 @@ afterEach(() => {
 })
  
 describe('External link btns', () => {
-  it('renders filters list', () => {
+  it('renders external link buttons', () => {
     const project = {"links": [{"type": '', "link": ''}]}
     render(<LinksBtns  project = { project }/>)
     const link = screen.getByTestId('ExternalLinkBtn')

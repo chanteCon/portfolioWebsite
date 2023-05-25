@@ -6,8 +6,8 @@ afterEach(() => {
   cleanup()
 })
  
-describe('Filter List', () => {
-  it('renders filters list', () => {
+describe('Home Page More Buttons', () => {
+  it('renders buttons', () => {
     render(<HomePageMoreBtn link = ""/>)
     const btn = screen.getByTestId('homePageMore')
     expect(btn).toBeInTheDocument()
