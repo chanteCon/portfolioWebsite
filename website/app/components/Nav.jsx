@@ -43,9 +43,10 @@ export const Nav = () => {
                 <Image
                     src ={"/images/logo.svg"}
                     alt="Picture of laptop" 
-                    className = "fixed left-[20px] top-[7px]"
                     width = {35}
-                    height = {35} >
+                    height = {35}
+                    className = "fixed left-[20px] top-[7px] h-auto"
+                  >
                 </Image>
               </Link>
               <div
