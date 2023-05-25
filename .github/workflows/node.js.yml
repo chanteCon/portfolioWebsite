@@ -9,8 +9,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-build:
-  test:
+jobs:
+  build:
 
     runs-on: ubuntu-latest
     defaults:
@@ -29,5 +29,5 @@ build:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
-    - run: npm run build
+    - run: npm run build --if-present
     - run: npm run coverage
