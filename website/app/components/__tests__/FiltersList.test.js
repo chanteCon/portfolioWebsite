@@ -1,10 +1,16 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import { FiltersList } from '../FiltersList';
 import '@testing-library/jest-dom';
+let assignMock = jest.fn();
+
+delete window.location;
+window.location = { assign: assignMock };
 
 afterEach(() => {
   cleanup()
+  assignMock.mockClear();
 })
+
  
 describe('Filter List', () => {
   it('renders filters list', () => {
