@@ -30,6 +30,7 @@ export const Nav = () => {
   // if screen size small then collapse navbar
   return (
     <div 
+    data-testid = "nav"
       className= "w-full text-neutral-400 text-sm pt-3 flex justify-between px-10 font-light fixed top-0 bg-[#191919]"
       > 
       { smallScreen
@@ -57,6 +58,7 @@ export const Nav = () => {
                   <Image 
                     className = "hover:opacity-70"
                     src = {"/images/icons/hamburgerIcon.png"}
+                    alt =""
                     width = {17}
                     height = {17}
                   >
@@ -90,7 +92,7 @@ export const Nav = () => {
                 >
                 <Image
                   src ={"/images/logo.svg"}
-                  alt="Picture of laptop" 
+                  alt="CCS logo" 
                   className = "rounded-full mb-2"
                   width = {35}
                   height = {35} >
