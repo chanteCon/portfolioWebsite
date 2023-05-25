@@ -5,8 +5,10 @@ export const LinksBtns = ({ project }) => {
     project.links.map(link =>
       link.type !== "video" &&
       <a
+        data-testid = "ExternalLinkBtn"
         style = {{ lineHeight: '0.9' }}
         href = {link.link}
+        key = {link.link}
         target = "_blank"
         rel="noreferrer noopener"
         className = {smallLightBtnWithImage}
