@@ -16,15 +16,14 @@ import { PopUpBackDrop } from "../components/PopUpBackDrop"
 export default function Projects({ params, searchParams }) {
   const filters = ["All", "Web", "Blockchain", "Games", "Released/Deployed", "Source code", "Blueprints", "JavaScript", "Python", "Solidity"]
   const [showFilters, setShowFilters] = React.useState(false)
-  const [activeFilter, setActiveFilter] = React.useState(searchParams.filter ? searchParams.filter : 'All')
-  const [hideImgCard, setHideImgCard] = React.useState('')
+  const [activeFilter, setActiveFilter] = React.useState(searchParams.filter ? searchParams.filter : "All")
+  const [hideImgCard, setHideImgCard] = React.useState("")
   const projects = data.projects
   const displayProjects = projects.filter(project => project.filters.includes(activeFilter))
   
   React.useEffect(() => {
-    searchParams.filter ? setActiveFilter(searchParams.filter) : setActiveFilter('All')
-  }, [showFilters]);
-
+    searchParams.filter ? setActiveFilter(searchParams.filter) : setActiveFilter("All")
+  }, [showFilters, searchParams.filter ]);
 
   return (
     <div className = "w-full flex flex-col align-center justify-center pt-[80px]">
@@ -39,7 +38,7 @@ export default function Projects({ params, searchParams }) {
                   <div
                     className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] overflow-hidden bg-[#262626] text-sm md:text-lg text-[#F2EAE8] relative pt-[40px] p-[30px]"
                     key = {project.name}
-                    onMouseLeave = { () => {setHideImgCard('')} }
+                    onMouseLeave = { () => {setHideImgCard("")} }
                   >
                   <p className= " text-md " >{project.name.toUpperCase()}</p>
                     <p
@@ -49,7 +48,7 @@ export default function Projects({ params, searchParams }) {
                      <LinksBtns project = {project} />
                       <Link
                             className = {smallLightBtn}
-                            style = {{ lineHeight: '30px' }}
+                            style = {{ lineHeight: "30px" }}
                             href = {`/projects/${project.name}`}
               
                       > MORE +

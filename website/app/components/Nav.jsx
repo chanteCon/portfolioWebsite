@@ -20,12 +20,12 @@ export const Nav = () => {
   }, []);
 
   useEffect(() => {
-      window.addEventListener( 'resize', checkScreenSize)
+      window.addEventListener( "resize", checkScreenSize)
   }, []);
 
   const isActiveLink = (link) => {
-    if (link === pathname) return 'text-[#F6A693] font-light'
-    return 'text-neutral-400' 
+    if (link === pathname) return "text-[#F6A693] font-light"
+    return "text-neutral-400" 
   }
   // if screen size small then collapse navbar
   return (
@@ -54,7 +54,7 @@ export const Nav = () => {
               <button
                 className="hover:text-[#F6A693]"
                 onClick = {() => setShowNavItems(!showNavItems)}> {
-                showNavItems ? 'x' : 
+                showNavItems ? "x" : 
                   <Image 
                     className = "hover:opacity-70"
                     src = {"/images/icons/hamburgerIcon.png"}
@@ -101,24 +101,24 @@ export const Nav = () => {
               </Link>
               <section
                 className= "flex justify-end space-x-5 pt-2"
-                style = {{backgroundColor: '#1A1A1A'}}>
+                style = {{backgroundColor: "#1A1A1A"}}>
                   <Link 
-                    href = '/' 
-                    className = {isActiveLink('/')}
+                    href = "/" 
+                    className = {isActiveLink("/")}
                   >
                     Home</Link>
                   <Link 
-                    href = '/projects'
-                    className = {isActiveLink('/projects')}
+                    href = "/projects"
+                    className = {isActiveLink("/projects")}
                   >
                     Recent Projects</Link>
                   <Link 
-                    href = '/about'
-                    className = {isActiveLink('/about')}
+                    href = "/about"
+                    className = {isActiveLink("/about")}
                   > About </Link>
                   <Link 
-                    href = '/contact'
-                    className = {isActiveLink('/contact')}
+                    href = "/contact"
+                    className = {isActiveLink("/contact")}
                   > Contact </Link>
                 </section>
               </> )

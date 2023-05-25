@@ -6,7 +6,7 @@ export const LinksBtns = ({ project }) => {
       link.type !== "video" &&
       <a
         data-testid = "ExternalLinkBtn"
-        style = {{ lineHeight: '0.9' }}
+        style = {{ lineHeight: "0.9" }}
         href = {link.link}
         key = {link.link}
         target = "_blank"
@@ -16,7 +16,8 @@ export const LinksBtns = ({ project }) => {
       <p className = "self-center" >{link.name}</p>
       <img
         className = "w-[15px] h-[15px] self-center"
-        src = '/images/icons/externalLinkBlack.png'
+        src = "/images/icons/externalLinkBlack.png"
+        alt = ""
       />
     </a>)
   )

@@ -35,9 +35,11 @@ export default function About() {
     <div className = "flex flex-row gap-[7px]">
      {skill.map(skill =>  
        <img 
+          key = { crypto.randomUUID() }
           src ="images/pinkDot.png"
           height = "10px"
           width = "10px"
+          alt = ""
       />)}
     </div>
     )
@@ -110,7 +112,9 @@ export default function About() {
             <div className = "w-[280px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
               {
                 languages.map(language =>
-                <div className = "flex justify-center items-center gap-[10px]" >
+                <div 
+                  key = { language.language }
+                  className = "flex justify-center items-center gap-[10px]" >
                   <p className = "w-[100px]">{language.language}</p>
                   <div >
                     {addSkill(language.skill)}
@@ -124,7 +128,9 @@ export default function About() {
             <div className = "w-[280px] h-[280px] bg-[#262626] flex flex-col justify-center items-start gap-[10px] p-[10%]">
               {
                 tools.map(tool =>
-                  <div className = "w-full flex justify-between">
+                  <div
+                    key = { tool } 
+                    className = "w-full flex justify-between">
                   <div className = "w-[130px]" >{tool}</div>
                   <SmallTick />
                   </div>

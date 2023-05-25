@@ -1,7 +1,7 @@
 "use client"
 
-import emailjs from '@emailjs/browser';
-import React from 'react';
+import emailjs from "@emailjs/browser";
+import React from "react";
 
 export const ContactForm = ({ title }) => {
   const [sent, setSent] = React.useState(false)
@@ -12,7 +12,7 @@ export const ContactForm = ({ title }) => {
     e.preventDefault();
     e.stopPropagation();
 
-    emailjs.sendForm('service_3synuej', 'template_tuxvbwe', form.current, 'v_cQnqwTKfpAgXAPh')
+    emailjs.sendForm("service_3synuej", "template_tuxvbwe", form.current, "v_cQnqwTKfpAgXAPh")
       .then((result) => {
           setSent(true)
           console.log(result.text);

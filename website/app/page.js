@@ -24,11 +24,11 @@ export default function Home() {
       <div className = "flex flex-col flex-1 items-center h-100 w-[90%] sm:w-[60%] text-center pt-[100px] sm:pt-[200px] text-neutral-300 gap-[60px]" >
         <section className = "xl:w-[50%]">
           <div className = "font-light">
-            <h1 style = {{ fontSize: '28pt' }} >Hi, I'm Chantelle. I'm a</h1>
+            <h1 style = {{ fontSize: "28pt" }} >Hi, I&apos;m Chantelle. I&apos;m a</h1>
             <div className = "flex justify-center gap-[10px]">
             <h1 
               className = "text-3xl text-[#F6A693]"
-              style = {{ fontSize: '28pt' }}
+              style = {{ fontSize: "28pt" }}
               >
                 developer.
             </h1>
@@ -56,7 +56,7 @@ export default function Home() {
               <div
                 className = "h-[200px] w-[250px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8] relative pt-[40px] p-[30px] rounded-xl"
                 key = {project.name}
-                onMouseLeave = { () => {setHideImgCard('')} }
+                onMouseLeave = { () => {setHideImgCard("")} }
               >
               <p className= " text-md " >{project.name.toUpperCase()}</p>
               <p

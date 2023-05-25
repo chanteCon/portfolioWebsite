@@ -11,6 +11,7 @@ export const HomePageLinks = ({link, img}) => {
       src = {img}
       width = "20px"
       height = "20px"
+      alt = ""
     />
   </a>
   )
