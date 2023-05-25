@@ -14,7 +14,7 @@ const config = {
   testEnvironment: 'jest-environment-jsdom',
    coverageThreshold: {
         global: {
-            lines: 10000,
+            lines: 90,
         },
     },
 };
