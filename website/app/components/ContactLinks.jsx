@@ -4,7 +4,7 @@ export const ContactLinks = ({onClick}) => {
    <div data-testid = "contactLinks" className ="flex gap-[30px]">
       <HomePageLinks 
         link = "https://github.com/chanteCon" 
-        img = "images/icons/GitIcon.png"
+        img = "images/icons/gitIcon.png"
      />
       <HomePageLinks 
         link = "https://www.linkedin.com/in/chantelle-conlon-scoullar-2456ab259/" 
