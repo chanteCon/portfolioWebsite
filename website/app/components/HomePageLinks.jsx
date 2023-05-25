@@ -1,6 +1,7 @@
 export const HomePageLinks = ({link, img}) => {
   return (
   <a 
+    data-testid = "homePageLinks"
     href = {link}
     target = "_blank"
     rel="noreferrer noopener"
