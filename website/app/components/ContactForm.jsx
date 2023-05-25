@@ -23,14 +23,17 @@ export const ContactForm = ({ title }) => {
   };
 
   return (
-    <div className = "w-full flex flex-col items-center">
-      <p className = "pb-[10px] md:pb-[20px] text-lg" >{
+    <div data-testid = "contactForm"
+         className = "w-full flex flex-col items-center"
+    >
+      <h1 className = "pb-[10px] md:pb-[20px] text-lg" >{
       title ? title : "Say hello!"
-      }</p>
+      }</h1>
       <form ref={form} className = "w-[70%] flex flex-col gap-[10px]" >
         <input 
           type="text"
           name="user_name"
+          aria-label = "user_name"
           className = "placeholder-[#C6C0BE] bg-[#262626] border-[1px] border-[#F6A693] w-full rounded-lg p-[5px] px-[25px]"
           placeholder= "name"
         />
