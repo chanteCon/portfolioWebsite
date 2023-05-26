@@ -4,6 +4,11 @@ import { EducationInfo } from "../components/EducationInfo";
 import { ProjectsByCategory } from "../components/ProjectsByCategory";
 import { SmallTick } from "../components/SmallTick";
 
+export const metadata = {
+  title: "About",
+  description: "Chantelle Conlon Scoullar, a developer from Sydney Australia. I have a passion for coding and enjoy working on any programming project. I have recently completed my Bachelor of Computer Science at the Univeristy of New South Wales with distinction. I am currently open to work."
+}
+
 export default function About() {
 
   const languages = [
