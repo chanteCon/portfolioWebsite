@@ -14,7 +14,7 @@ export const metadata = {
     default: "Chantelle Conlon Scoullar",
     template: "%s | Chantelle Conlon Scoullar"
   },
-  description: "I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.",
+  description: "Chantelle Conlon Scoullar BCompSc. I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.",
   keywords: ["Next.js", "Python", "Java", "JavaScript", "Solidity", "C", "UNSW", "Portfolio"],
   authors: [{name: "Chantelle Conlon Scoullar"}],
   creator: "Chantelle Conlon Scoullar",
