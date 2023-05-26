@@ -3,9 +3,12 @@ import data from "data/projects.json"
 import { BlurImage } from "@/app/components/BlurImage";
 import { SmallTick } from "@/app/components/SmallTick";
 import { VideoEmbeds } from "@/app/VideoEmbeds";
-import { smallLightBtnWithImage } from "@/app/TailwindStyles";
 import { LinksBtns } from "@/app/components/LinkBtns";
 import { ContactForm } from "@/app/components/ContactForm";
+
+export const metadata = {
+  title: "Project"
+}
 
 export default function ProjectPage ({ params })  {
   const name = params.name.replace("%20"," ")

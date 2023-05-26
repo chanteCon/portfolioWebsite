@@ -10,8 +10,30 @@ const roboto = Roboto({
  
 
 export const metadata = {
-  title: "Chantelle Conlon Scoullar",
-  description: "This website is my portfolio to showcase some of my coding work",
+  title: {
+    default: "Chantelle Conlon Scoullar",
+    template: "%s | Chantelle Conlon Scoullar"
+  },
+  description: "Chantelle Conlon Scoullar BCompSc. I design and build software solutions to solve real world problems. I have experience with frontend and backend web development, game development, SaaS projects and more.",
+  keywords: ["Next.js", "Python", "Java", "JavaScript", "Solidity", "C", "UNSW", "Portfolio"],
+  authors: [{name: "Chantelle Conlon Scoullar"}],
+  creator: "Chantelle Conlon Scoullar",
+  openGraph: {
+    title: "Chantelle Conlon Scoullar",
+    description: " Chantelle Conlon Scoullar BCompSc. I design and build software solutions to solve real world problems.",
+    url: "https://www.chantellecs.com",
+    siteName: "Chantelle CS Portfolio",
+    images: [{
+      url: "/images/laptop.jpg",
+      width: 800,
+      height: 800
+    }]
+  },
+  robots: {
+    googleBot: {
+      index: true
+    }
+  }
 }
 
 export default function RootLayout({ children }) {
