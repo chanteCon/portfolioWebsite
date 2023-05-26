@@ -24,9 +24,9 @@ export const metadata = {
     url: "https://www.chantellecs.com",
     siteName: "Chantelle CS Portfolio",
     images: [{
-      url: "/images/background.jpg",
-      width: 800,
-      height: 800
+      url: "/images/aboutImg.png",
+      width: 400,
+      height: 400
     }]
   },
   robots: {
