@@ -20,7 +20,7 @@ export const metadata = {
   creator: "Chantelle Conlon Scoullar",
   openGraph: {
     title: "Chantelle Conlon Scoullar",
-    description: " design and build software solutions to solve real world problems.",
+    description: " Chantelle Conlon Scoullar BCompSc. I design and build software solutions to solve real world problems.",
     url: "https://www.chantellecs.com",
     siteName: "Chantelle CS Portfolio",
     images: [{
