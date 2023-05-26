@@ -24,7 +24,7 @@ export const metadata = {
     url: "https://www.chantellecs.com",
     siteName: "Chantelle CS Portfolio",
     images: [{
-      url: '/images/background.jpg',
+      url: "/images/background.jpg",
       width: 800,
       height: 800
     }]
