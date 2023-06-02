@@ -1,7 +1,7 @@
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { ContactForm } from "../ContactForm";
 import "@testing-library/jest-dom";
-import userEvent from '@testing-library/user-event'
+import userEvent from "@testing-library/user-event"
 
 afterEach(() => {
   cleanup()
@@ -35,9 +35,9 @@ describe("Contact Form", () => {
     const inputs = screen.getAllByRole("textbox")
     fireEvent.focus(inputs[0])
     fireEvent.blur(inputs[0])
-    screen.getByText('Please enter your name')
+    screen.getByText("Please enter your name")
     fireEvent.keyDown(inputs[0])
-    const error = screen.queryByText('Please enter your name')
+    const error = screen.queryByText("Please enter your name")
     expect(error).not.toBeInTheDocument()
   });
 
@@ -47,9 +47,9 @@ describe("Contact Form", () => {
     const inputs = screen.getAllByRole("textbox")
     fireEvent.focus(inputs[1])
     fireEvent.blur(inputs[1])
-    screen.getByText('Please enter your email')
+    screen.getByText("Please enter your email")
     fireEvent.keyDown(inputs[1])
-    const error = screen.queryByText('Please enter your email')
+    const error = screen.queryByText("Please enter your email")
     expect(error).not.toBeInTheDocument()
   });
 
@@ -58,9 +58,9 @@ describe("Contact Form", () => {
     const inputs = screen.getAllByRole("textbox")
     fireEvent.focus(inputs[2])
     fireEvent.blur(inputs[2])
-    screen.getByText('Please enter your message')
+    screen.getByText("Please enter your message")
     fireEvent.keyDown(inputs[2])
-    const error = screen.queryByText('Please enter your message')
+    const error = screen.queryByText("Please enter your message")
     expect(error).not.toBeInTheDocument()
   });
 
@@ -78,9 +78,9 @@ describe("Contact Form", () => {
   it("clicking button changes text when fields valid", () => {
     render(<ContactForm />);
     const inputs = screen.getAllByRole("textbox")
-    fireEvent.change(inputs[0], {target: {value: 'name'}})
-    fireEvent.change(inputs[1], {target: {value: 'email'}})
-    fireEvent.change(inputs[2], {target: {value: 'test message'}})
+    fireEvent.change(inputs[0], {target: {value: "name"}})
+    fireEvent.change(inputs[1], {target: {value: "email"}})
+    fireEvent.change(inputs[2], {target: {value: "test message"}})
     const button = screen.getByRole("button")
     let text = screen.getByText("Send Message")
     expect(text).toBeInTheDocument()
