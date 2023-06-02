@@ -18,7 +18,7 @@ export const ContactForm = ({ title }) => {
     const inputs = form.current.querySelectorAll('input')
     if (inputs[0].value.length === 0 || 
         inputs[1].value.length === 0 ||
-        inputs[2].value.length === 0) {
+        form.current.querySelector('textarea').value.length === 0) {
           setInvalidSend(true)
           return
     }
@@ -35,8 +35,6 @@ export const ContactForm = ({ title }) => {
   };
 
   const checkInput = (e) => {
-    console.log(e.target.value)
-    console.log(e.target.placeholder)
     switch (e.target.placeholder) {
       case 'name':
         e.target.value.length === 0 ? setInvalidName(true) : setInvalidName(false)
