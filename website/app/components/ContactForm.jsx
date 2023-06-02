@@ -15,10 +15,10 @@ export const ContactForm = ({ title }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    const inputs = form.current.querySelectorAll('input')
+    const inputs = form.current.querySelectorAll("input")
     if (inputs[0].value.length === 0 || 
         inputs[1].value.length === 0 ||
-        form.current.querySelector('textarea').value.length === 0) {
+        form.current.querySelector("textarea").value.length === 0) {
           setInvalidSend(true)
           return
     }
@@ -36,13 +36,13 @@ export const ContactForm = ({ title }) => {
 
   const checkInput = (e) => {
     switch (e.target.placeholder) {
-      case 'name':
+      case "name":
         e.target.value.length === 0 ? setInvalidName(true) : setInvalidName(false)
         break;
-      case 'email':
+      case "email":
         e.target.value.length === 0 ? setInvalidEmail(true) : setInvalidEmail(false)
         break;
-      case 'Your message':
+      case "Your message":
         e.target.value.length === 0 ? setInvalidMsg(true) : setInvalidMsg(false)
         break;
     }
