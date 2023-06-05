@@ -1,13 +1,13 @@
-"use client"
-
 import { ContactForm } from "../components/ContactForm";
 import { ContactLinks } from "../components/ContactLinks";
 
+export const metadata = {
+  title: "Contact",
+  description: "Phone: 0413122769, Email: chantelle.cs@outlook.com"
+}
+
+
 export default function Contact() {
-  const copyUserName = () => {
-    navigator.clipboard.writeText("ChanteCon#4811")
-    alert("username copied")
-  }
 
   return (
     <main className = "pt-[120px] flex flex-col justify-center text-[#F2EAE8] text-center w-full">
@@ -31,7 +31,7 @@ export default function Contact() {
             />
           </div>
           <div className = "flex gap-[30px] mt-[-30px] ml-[10px]">
-            <ContactLinks onClick = {() => copyUserName()}/>
+            <ContactLinks />
           </div>
           <a 
             className = "flex gap-[15px] hover:opacity-70 w-[200px]" 

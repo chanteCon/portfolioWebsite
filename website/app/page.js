@@ -14,11 +14,6 @@ export default function Home() {
   const projects = data.projects
   const [hideImgCard, setHideImgCard] = React.useState("")
 
-  const copyUserName = () => {
-    navigator.clipboard.writeText("ChanteCon#4811")
-    alert("username copied")
-  }
-
   return (
     <>
       <div className = "flex flex-col flex-1 items-center h-100 w-[90%] sm:w-[60%] text-center pt-[100px] sm:pt-[200px] text-neutral-300 gap-[60px]" >
@@ -40,7 +35,7 @@ export default function Home() {
           </p>
         </section>
         <section className = "flex gap-[30px] mt-[-30px]">
-          <ContactLinks onClick = {() => copyUserName()}/>
+          <ContactLinks ååå/>
         </section>
         <section className = "w-full">
           <div className = "flex gap-[10px] justify-center items-center">

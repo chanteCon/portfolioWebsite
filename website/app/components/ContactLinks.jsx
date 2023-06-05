@@ -1,5 +1,13 @@
+"use client"
+
 import { HomePageLinks } from "./HomePageLinks"
-export const ContactLinks = ({onClick}) => {
+export const ContactLinks = () => {
+
+  const copyUserName = () => {
+    navigator.clipboard.writeText("ChanteCon#4811")
+    alert("username copied")
+  }
+    
   return (
    <div data-testid = "contactLinks" className ="flex gap-[30px]">
       <HomePageLinks 
@@ -11,7 +19,7 @@ export const ContactLinks = ({onClick}) => {
         img = "images/icons/LinkedInIcon.png"
         />
       <button
-        onClick = {onClick} 
+        onClick = {copyUserName} 
         className = "hover:opacity-80"
       >
         <img 

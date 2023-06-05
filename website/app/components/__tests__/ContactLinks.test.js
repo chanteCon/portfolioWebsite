@@ -18,15 +18,6 @@ describe("Contact Links", () => {
     expect(button).toBeInTheDocument()
   });
 
-  it("on click function works", () => {
-    let clicked = false
-    const onClick = jest.fn(() => {clicked = true})
-    render(<ContactLinks onClick = { onClick }/>)
-    const button = screen.getByRole("button")
-    button.click()
-    expect(clicked)
-  });
-
   it("discord icon renders", () => {
     render(<ContactLinks />)
     const img = screen.getAllByRole("img")[2]
