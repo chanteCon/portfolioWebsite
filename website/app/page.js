@@ -93,10 +93,10 @@ export default function Home() {
             </div>
           </section>
         </section>
-        <section className = "w-full sm:w-[60%]">
+      </div>
+      <section className = "w-full md:w-[60%] lg:w-[50%] xl:w-[40%] text-neutral-300 pt-[70px]">
           <ContactForm />
         </section>
-      </div>
     </>
   )
 }
