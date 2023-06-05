@@ -1,13 +1,13 @@
-"use client"
-
 import { ContactForm } from "../components/ContactForm";
 import { ContactLinks } from "../components/ContactLinks";
 
+export const metadata = {
+  title: "Contact",
+  description: "Phone: 0413122769, Email: chantelle.cs@outlook.com"
+}
+
+
 export default function Contact() {
-  const copyUserName = () => {
-    navigator.clipboard.writeText("ChanteCon#4811")
-    alert("username copied")
-  }
 
   return (
     <main className = "pt-[120px] flex flex-col justify-center text-[#F2EAE8] text-center w-full">
@@ -16,10 +16,10 @@ export default function Contact() {
         <p className = "text-lg" >I would love to hear from you</p>
       </section>
       <section className = "justify-center w-full flex flex-wrap-reverse">
-        <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#373737] flex flex-col pt-[20px] lg:pt-[70px] md:pt-[50px] items-center">
+        <div className = "justify-center w-[300px] sm:w-[400px] lg:w-[500px] xl:w-[550px] h-[500px] md:h-[600px] bg-[#373737] flex flex-col pt-[20px] lg:pt-[70px] md:pt-[50px] items-center">
           <ContactForm />
         </div>
-        <div className = "w-[300px] md:w-[400px] lg:w-[500px] xl:w-[550px] h-[350px] md:h-[450px] lg:h-[600px] bg-[#262626] text-left p-[30px] md:p-[100px] flex flex-col gap-[50px]">
+        <div className = "justify-center w-[300px] sm:w-[400px] lg:w-[500px] xl:w-[550px] h-[500px] md:h-[600px] bg-[#262626] text-left p-[30px] sm:p-[100px] flex flex-col gap-[50px]">
           <div className = "self-start flex flex-col items-center">
             <p className = "lg:text-lg" >Chantelle Conlon Scoullar</p>
             <img 
@@ -31,7 +31,7 @@ export default function Contact() {
             />
           </div>
           <div className = "flex gap-[30px] mt-[-30px] ml-[10px]">
-            <ContactLinks onClick = {() => copyUserName()}/>
+            <ContactLinks />
           </div>
           <a 
             className = "flex gap-[15px] hover:opacity-70 w-[200px]" 
