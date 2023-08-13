@@ -4,7 +4,7 @@ import { HomePageLinks } from "./HomePageLinks"
 export const ContactLinks = () => {
 
   const copyUserName = () => {
-    navigator.clipboard.writeText("ChanteCon#4811")
+    navigator.clipboard.writeText("chantecon")
     alert("username copied")
   }
     
