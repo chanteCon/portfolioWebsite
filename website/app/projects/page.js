@@ -35,10 +35,11 @@ export default function Projects({ params, searchParams }) {
                 displayProjects.map(project =>
                   hideImgCard === project.name
                   ?
-                  <div
+                  <a
                     className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] overflow-hidden bg-[#262626] text-sm md:text-lg text-[#F2EAE8] relative pt-[40px] p-[30px]"
                     key = {project.name}
                     onMouseLeave = { () => {setHideImgCard("")} }
+                    href = {`/projects/${project.name}`}
                   >
                   <p className= " text-md " >{project.name.toUpperCase()}</p>
                     <p
@@ -55,7 +56,7 @@ export default function Projects({ params, searchParams }) {
                       </Link>
                   </div>
                      <MainProjectSkill project = { project }/>
-                  </div>
+                  </a>
                   :
                   <div
                     className = "h-[250px] w-[300px] md:h-[350px] md:w-[400px] overflow-hidden relative"

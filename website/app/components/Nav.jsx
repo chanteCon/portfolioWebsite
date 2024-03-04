@@ -25,7 +25,7 @@ export const Nav = () => {
 
   const isActiveLink = (link) => {
     if (link === pathname) return "text-[#F6A693] font-light"
-    return "text-neutral-400" 
+    return "text-neutral-400 hover:text-neutral-500" 
   }
   // if screen size small then collapse navbar
   return (
@@ -42,7 +42,6 @@ export const Nav = () => {
               >
                 <Image
                     src ={"/images/logo.svg"}
-                    alt="Picture of laptop" 
                     width = {35}
                     height = {35}
                     className = "fixed left-[20px] top-[7px] h-auto"
@@ -57,7 +56,7 @@ export const Nav = () => {
                 onClick = {() => setShowNavItems(!showNavItems)}> {
                 showNavItems ? "x" : 
                   <Image 
-                    className = "hover:opacity-70"
+                    className = "hover:opacity-70 bg-[#191919]"
                     src = {"/images/icons/hamburgerIcon.png"}
                     alt =""
                     width = {17}
@@ -102,7 +101,7 @@ export const Nav = () => {
               </Link>
               <section
                 className= "flex justify-end space-x-5 pt-2"
-                style = {{backgroundColor: "#1A1A1A"}}>
+                >
                   <Link 
                     href = "/" 
                     className = {isActiveLink("/")}
