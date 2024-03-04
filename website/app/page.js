@@ -48,10 +48,11 @@ export default function Home() {
               projects.map((project, idx) => 
               idx < 3 && hideImgCard === project.name
               ?
-              <div
+              <a
                 className = "h-[200px] w-[250px] overflow-hidden bg-[#262626] text-sm text-[#F2EAE8] relative pt-[40px] p-[30px] rounded-xl"
                 key = {project.name}
                 onMouseLeave = { () => {setHideImgCard("")} }
+                href = {`/projects/${project.name}`}
               >
               <p className= " text-md " >{project.name.toUpperCase()}</p>
               <p
@@ -59,7 +60,7 @@ export default function Home() {
               </p>
               <MainProjectSkill project = {project} />
               <HomePageMoreBtn link = {`/projects/${project.name}`} text = { " DETAILS " } />
-              </div>
+              </a>
               : idx < 3 &&
               <div
                 className = "h-[200px] w-[250px] overflow-hidden relative rounded-xl"
