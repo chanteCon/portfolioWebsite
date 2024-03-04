@@ -67,11 +67,11 @@ export default function About() {
       I am  Chantelle, a developer from Sydney Australia. I have a passion for coding and enjoy working on any programming project. I have recently completed my <p className = "text-[#F6A693] inline">Bachelor of Computer Science </p>at the Univeristy of New South Wales with distinction. I am currently open to work. 
       </div>
       <a
-        className = "flex gap-[10px] bg-[#F6A693] w-[110px] h-[40px] rounded-3xl items-center px-[15px] hover:opacity-70"
+        className = "flex gap-[10px] bg-[#F6A693] w-[110px] h-[40px] rounded-3xl items-center px-[15px] hover:opacity-70 hidden"
         type="submit" 
         target = "_blank"
         rel="noreferrer noopener"
-        href = "download/Resume.pdf"
+        href = ""
       > 
         <img 
           src = "/images/icons/downloadIcon.png"
